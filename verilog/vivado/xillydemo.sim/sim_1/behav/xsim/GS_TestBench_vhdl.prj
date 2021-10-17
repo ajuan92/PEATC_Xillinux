@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../xillydemo.ip_user_files/bd/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/sim/vivado_system_rst_processing_system7_0_100M_0.vhd" \
+
+# Do not sort compile order
+nosort

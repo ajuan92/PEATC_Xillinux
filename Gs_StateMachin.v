@@ -1,0 +1,160 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 16.09.2021 22:51:06
+// Design Name: 
+// Module Name: Gs_StateMachin
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Gs_StateMachin(
+    input iClk,
+    input iReset,
+    input [31:0] iGS_wdata, // Comando
+    input iGS_wren, //Señal que indica que hay cmd disponible
+    output oGS_wfull, //Señal para indicar que se leera la fifo
+    
+    // Conexión lectura de señales crudas
+    
+    input [15:0] i16Reg,
+    output [7:0] o8Addr,
+    output [7:0] o8SignSelec,
+    
+    output oWriteRawSignal, //Señal para escribir en la fifo
+    output [15:0] o16RawSignal
+    );
+
+parameter [7:0]STATE_IDLE = 8'd0;
+parameter [7:0]STATE_GET_CMD = 8'd1;
+parameter [7:0]STATE_SIGNAL_DB = 8'd2;
+
+reg  rNewCmd_d, rNewCmd_q = 1'd0; 
+reg  rRead_en_d, rRead_en_q = 1'd0; 
+reg [7:0] r8GS_States_d, r8GS_States_q = 8'd0;
+reg [31:0] r32Cmd_d, r32Cmd_q = 32'd0; 
+
+reg [15:0] r16Reg_q, r16Reg_d = 16'd0;
+reg rAddr_Comp = 1'd0;
+reg [8:0] r8Addr_q, r8Addr_d = 8'd0;
+reg [7:0] r8SignSelec_q, r8SignSelec_d = 8'd0; 
+reg rWriteRawSignal_q, rWriteRawSignal_d = 1'd0;
+
+assign oGS_wfull = rRead_en_q;
+assign o16RawSignal = r16Reg_q;
+assign o8Addr = r8Addr_q;
+assign o8SignSelec = r8SignSelec_q;
+assign oWriteRawSignal = rWriteRawSignal_q;
+
+always@(posedge iClk)
+begin
+    if(iReset)
+    begin
+        rNewCmd_q <= 1'd0;
+        r8GS_States_q <= STATE_IDLE;
+        r32Cmd_q <= 32'd0;
+        rRead_en_q <= 1'd0; 
+        
+        r16Reg_q <= 16'd0; 
+        r8Addr_q <= 8'd0; 
+        r8SignSelec_q <= 8'd0; 
+        rWriteRawSignal_q <= 1'd0; 
+             
+    end
+    else
+    begin
+        r8GS_States_q <= r8GS_States_d;
+        //r16Reg_q <= r16Reg_d; 
+        r8Addr_q <= r8Addr_d;
+        rRead_en_q <= rRead_en_d;
+        rNewCmd_q <= rNewCmd_d;
+        
+        r32Cmd_q <= r32Cmd_d; 
+        
+        r8SignSelec_q <= r8SignSelec_d;
+        rWriteRawSignal_q <= rWriteRawSignal_d;
+    end 
+    
+ end  
+
+    
+always@*
+begin
+    r32Cmd_d = iGS_wdata;
+    r16Reg_q = i16Reg;
+    
+    if(iGS_wren == 0)
+    begin
+        rNewCmd_d =  1'd1;
+    end
+    else
+    begin
+        rNewCmd_d =  1'd0;
+    end
+    
+    case (r8GS_States_q)
+        STATE_IDLE: 
+        
+            if(rNewCmd_q == 1'd1)
+            begin
+                rRead_en_d = 1'd1;
+                r8Addr_d = 8'd0;
+
+                r8GS_States_d = STATE_GET_CMD;
+            end
+            else
+            begin
+                rWriteRawSignal_d = 1'd0;
+                rRead_en_d = 1'd0;
+                r8GS_States_d = STATE_IDLE;
+            end
+            
+        STATE_GET_CMD:
+
+            if(r32Cmd_q != 32'd0)
+            begin
+                r8SignSelec_d = r32Cmd_q[31:24];
+                rRead_en_d = 1'd0;
+                r8GS_States_d = STATE_SIGNAL_DB;
+            end
+            else
+            begin
+                r8Addr_d = 8'd0;
+                rRead_en_d = 1'd0;
+
+                r8GS_States_d = STATE_GET_CMD;
+            end
+
+
+        STATE_SIGNAL_DB:
+            if(r8Addr_q  < (8'd66 + 8'd1))
+            begin
+                rWriteRawSignal_d = 1'd1;
+                r8Addr_d = r8Addr_q + 8'd1;
+            end
+            else
+            begin
+                r8GS_States_d = STATE_IDLE;
+                r8Addr_d = 8'd0;
+                r32Cmd_d = 32'd0;
+                r8SignSelec_d = 8'd0;
+                rWriteRawSignal_d = 1'd0;
+            end
+        default:  
+            r8GS_States_d = STATE_IDLE;
+    endcase
+end
+
+endmodule
