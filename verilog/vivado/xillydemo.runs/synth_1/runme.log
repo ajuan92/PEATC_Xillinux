@@ -13,9 +13,9 @@ source xillydemo.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado-ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2020.1/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 1010.457 ; gain = 0.000
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.cache/ip 
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1008.082 ; gain = 0.000
 Command: synth_design -top xillydemo -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -23,9 +23,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8700
+INFO: [Synth 8-7075] Helper process launched with PID 12612
+WARNING: [Synth 8-6901] identifier 'r8GetCmd' is used before its declaration [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:94]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1010.457 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1008.082 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'xillydemo' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:1]
 INFO: [Synth 8-6157] synthesizing module 'xillybus' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus.v:3]
@@ -1272,26 +1273,45 @@ INFO: [Synth 8-6155] done synthesizing module 'system' (55#1) [E:/ARCHIVOS_Y_DOC
 INFO: [Synth 8-6157] synthesizing module 'xillybus_core' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus_core.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'xillybus_core' (56#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus_core.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'xillybus' (57#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'xillydemo' (58#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fifo_GS_Host_FPGA' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10300-DESKTOP-L44A16B/realtime/fifo_GS_Host_FPGA_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_GS_Host_FPGA' (58#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10300-DESKTOP-L44A16B/realtime/fifo_GS_Host_FPGA_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_GS_FPGA_Host' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10300-DESKTOP-L44A16B/realtime/fifo_GS_FPGA_Host_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_GS_FPGA_Host' (59#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10300-DESKTOP-L44A16B/realtime/fifo_GS_FPGA_Host_stub.v:6]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:171]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:172]
+INFO: [Synth 8-6157] synthesizing module 'Gs_StateMachin' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:23]
+	Parameter STATE_IDLE bound to: 8'b00000000 
+	Parameter STATE_GET_CMD bound to: 8'b00000001 
+	Parameter STATE_READ_CMD bound to: 8'b00000010 
+	Parameter STATE_STOP_READ_CMD bound to: 8'b00000011 
+	Parameter STATE_SIGNAL_DB bound to: 8'b00000100 
+INFO: [Synth 8-6155] done synthesizing module 'Gs_StateMachin' (60#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:23]
+INFO: [Synth 8-6157] synthesizing module 'GS_RawSignal' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_RawSignal.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'GS_RawSignal' (61#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_RawSignal.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xillydemo' (62#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1120.961 ; gain = 110.504
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1125.176 ; gain = 117.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1120.961 ; gain = 110.504
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1125.176 ; gain = 117.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1120.961 ; gain = 110.504
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1125.176 ; gain = 117.094
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.265 . Memory (MB): peak = 1120.961 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.329 . Memory (MB): peak = 1125.176 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/ip/fifo_GS_Host_FPGA/fifo_GS_Host_FPGA/fifo_GS_Host_FPGA_in_context.xdc] for cell 'fifo_GS_RX'
+Finished Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/ip/fifo_GS_Host_FPGA/fifo_GS_Host_FPGA/fifo_GS_Host_FPGA_in_context.xdc] for cell 'fifo_GS_RX'
+Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/ip/fifo_GS_FPGA_Host/fifo_GS_FPGA_Host/fifo_GS_FPGA_Host_in_context.xdc] for cell 'fifo_GS_TX'
+Finished Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/ip/fifo_GS_FPGA_Host/fifo_GS_FPGA_Host/fifo_GS_FPGA_Host_in_context.xdc] for cell 'fifo_GS_TX'
 Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc] for cell 'xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst'
 INFO: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc:30]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
@@ -1517,22 +1537,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/xillydemo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1213.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1216.121 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1213.898 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.167 . Memory (MB): peak = 1216.121 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1213.898 ; gain = 203.441
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1216.121 ; gain = 208.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1213.898 ; gain = 203.441
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1216.121 ; gain = 208.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1549,11 +1569,14 @@ Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for fifo_GS_RX. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for fifo_GS_TX. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1213.898 ; gain = 203.441
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1216.121 ; gain = 208.039
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_21_b2s_wr_cmd_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_21_b2s_rd_cmd_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'r8GS_States_q_reg' in module 'Gs_StateMachin'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1572,8 +1595,18 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
                  SM_DONE |                               00 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_21_b2s_rd_cmd_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                            00001 |                         00000000
+           STATE_GET_CMD |                            00010 |                         00000001
+          STATE_READ_CMD |                            00100 |                         00000010
+     STATE_STOP_READ_CMD |                            01000 |                         00000011
+         STATE_SIGNAL_DB |                            10000 |                         00000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r8GS_States_q_reg' using encoding 'one-hot' in module 'Gs_StateMachin'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 1213.898 ; gain = 203.441
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:50 . Memory (MB): peak = 1216.121 ; gain = 208.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1581,7 +1614,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   12 Bit       Adders := 8     
-	   2 Input    9 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 3     
 	   2 Input    8 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 1     
 	   2 Input    5 Bit       Adders := 4     
@@ -1592,16 +1625,18 @@ Detailed RTL Component Info :
 	               64 Bit    Registers := 1     
 	               47 Bit    Registers := 2     
 	               36 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 9     
-	                9 Bit    Registers := 2     
-	                8 Bit    Registers := 2     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 3     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 4     
 	                4 Bit    Registers := 7     
 	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 10    
-	                1 Bit    Registers := 52    
+	                1 Bit    Registers := 58    
 +---Muxes : 
 	   2 Input   66 Bit        Muxes := 4     
 	   2 Input   64 Bit        Muxes := 1     
@@ -1611,13 +1646,17 @@ Detailed RTL Component Info :
 	   2 Input   14 Bit        Muxes := 2     
 	   2 Input   12 Bit        Muxes := 6     
 	   2 Input    9 Bit        Muxes := 4     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   4 Input    8 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 7     
+	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 19    
 	   2 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 17    
-	   4 Input    2 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 66    
+	   4 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 67    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1633,26 +1672,117 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[15] with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[15]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[15] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net r16Reg_q_reg[15] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[14] with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[14]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[14] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net r16Reg_q_reg[14] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[13] with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[13]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[13] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net r16Reg_q_reg[13] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[12] with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[12]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[12] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net r16Reg_q_reg[12] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[11] with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[11]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[11] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net r16Reg_q_reg[11] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[10] with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[10]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[10] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net r16Reg_q_reg[10] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[9] with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[9]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[9] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net r16Reg_q_reg[9] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[8] with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[8]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin r16Reg_q_reg[8] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net r16Reg_q_reg[8] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[7]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[6]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[5]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[4]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[3]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[2]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[1]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r16Reg_q_reg[0]/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r8SignSelec_q_reg[7]__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r8SignSelec_q_reg[6]__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r8SignSelec_q_reg[5]__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r8SignSelec_q_reg[4]__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r8SignSelec_q_reg[3]__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r8SignSelec_q_reg[2]__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r8SignSelec_q_reg[1]__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'GS_StateMachin/r8SignSelec_q_reg[0]__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v:60]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 1213.898 ; gain = 203.441
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:57 . Memory (MB): peak = 1216.121 ; gain = 208.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++-------------+---------------------------------+---------------+----------------+
+|Module Name  | RTL Object                      | Depth x Width | Implemented As | 
++-------------+---------------------------------+---------------+----------------+
+|GS_RawSignal | r16ReadMemS1                    | 128x8         | LUT            | 
+|GS_RawSignal | r16ReadMemS2                    | 128x8         | LUT            | 
+|GS_RawSignal | r16ReadMemS3                    | 128x8         | LUT            | 
+|xillydemo    | GS_StateMachin/r8Addr_q_reg_rep | 128x8         | Block RAM      | 
+|xillydemo    | GS_StateMachin/r8Addr_q_reg_rep | 128x8         | Block RAM      | 
+|xillydemo    | GS_StateMachin/r8Addr_q_reg_rep | 128x8         | Block RAM      | 
++-------------+---------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:01:07 . Memory (MB): peak = 1249.266 ; gain = 238.809
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:08 . Memory (MB): peak = 1249.852 ; gain = 241.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:10 . Memory (MB): peak = 1330.199 ; gain = 319.742
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:09 . Memory (MB): peak = 1282.680 ; gain = 274.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:13 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:11 . Memory (MB): peak = 1293.875 ; gain = 285.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1670,37 +1800,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:20 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:19 . Memory (MB): peak = 1297.645 ; gain = 289.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:20 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:19 . Memory (MB): peak = 1297.645 ; gain = 289.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:19 . Memory (MB): peak = 1297.645 ; gain = 289.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:19 . Memory (MB): peak = 1297.645 ; gain = 289.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1297.645 ; gain = 289.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1297.645 ; gain = 289.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1724,49 +1854,53 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |xillybus_core |         1|
-|2     |xillybus_lite |         1|
-|3     |xillyvga_core |         1|
-+------+--------------+----------+
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |fifo_GS_Host_FPGA |         1|
+|2     |fifo_GS_FPGA_Host |         1|
+|3     |xillybus_core     |         1|
+|4     |xillybus_lite     |         1|
+|5     |xillyvga_core     |         1|
++------+------------------+----------+
 
 Report Cell Usage: 
 +------+-------------------+------+
 |      |Cell               |Count |
 +------+-------------------+------+
-|1     |xillybus_core      |     1|
-|2     |xillybus_lite_bbox |     1|
-|3     |xillyvga_core      |     1|
-|4     |BIBUF              |   130|
-|5     |BUFG               |     1|
-|6     |CARRY4             |    18|
-|7     |LUT1               |   118|
-|8     |LUT2               |    41|
-|9     |LUT3               |   278|
-|10    |LUT4               |    94|
-|11    |LUT5               |    93|
-|12    |LUT6               |   161|
-|13    |PS7                |     1|
-|14    |SRL16              |     1|
-|15    |SRL16E             |    18|
-|16    |SRLC32E            |    47|
-|17    |FDCE               |    14|
-|18    |FDR                |     8|
-|19    |FDRE               |   705|
-|20    |FDSE               |    20|
-|21    |IBUF               |     2|
-|22    |IOBUF              |    56|
-|23    |OBUF               |    18|
-|24    |OBUFT              |     5|
+|1     |fifo_GS_FPGA_Host  |     1|
+|2     |fifo_GS_Host_FPGA  |     1|
+|3     |xillybus_core      |     1|
+|4     |xillybus_lite_bbox |     1|
+|5     |xillyvga_core      |     1|
+|6     |BIBUF              |   130|
+|7     |BUFG               |     1|
+|8     |CARRY4             |    18|
+|9     |LUT1               |   119|
+|10    |LUT2               |    40|
+|11    |LUT3               |   287|
+|12    |LUT4               |   107|
+|13    |LUT5               |   100|
+|14    |LUT6               |   173|
+|15    |PS7                |     1|
+|16    |SRL16              |     1|
+|17    |SRL16E             |    18|
+|18    |SRLC32E            |    47|
+|19    |FDCE               |    14|
+|20    |FDR                |     8|
+|21    |FDRE               |   774|
+|22    |FDSE               |    21|
+|23    |IBUF               |     2|
+|24    |IOBUF              |    56|
+|25    |OBUF               |    18|
+|26    |OBUFT              |     5|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1297.645 ; gain = 289.562
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 1338.715 ; gain = 235.320
-Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:21 . Memory (MB): peak = 1338.715 ; gain = 328.258
+Synthesis finished with 0 errors, 72 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:11 . Memory (MB): peak = 1297.645 ; gain = 198.617
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1297.645 ; gain = 289.562
 INFO: [Project 1-571] Translating synthesized netlist
 Release 14.7 - ngc2edif P_INT.20191124 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
@@ -1810,7 +1944,7 @@ WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_w0[26 : 0] on block
    signals.
   finished :Prep
 Writing EDIF netlist file xillybus_core.edif ...
-ngc2edif: Total memory usage is 4329996 kilobytes
+ngc2edif: Total memory usage is 4329740 kilobytes
 
 Reading core file 'E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/xillinux-PEATC/cores/xillybus_core.ngc' for (cell view 'xillybus_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_core_ngc_72bd8348.edif]
@@ -1825,7 +1959,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file xillybus_lite.edif ...
-ngc2edif: Total memory usage is 4320396 kilobytes
+ngc2edif: Total memory usage is 4319756 kilobytes
 
 Reading core file 'e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/system/pcores/xillybus_lite_v1_00_a/netlist/xillybus_lite.ngc' for (cell view 'xillybus_lite', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_lite_ngc_afbf6ef9.edif]
@@ -1857,13 +1991,13 @@ ngc2edif: Total memory usage is 4321804 kilobytes
 Reading core file 'E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/xillinux-PEATC/cores/xillyvga_core.ngc' for (cell view 'xillyvga_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_72bd8348.edif]
 Finished Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_72bd8348.edif]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.383 . Memory (MB): peak = 1349.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.400 . Memory (MB): peak = 1315.262 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3682 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Xilinx ngc2edif P_INT.20191124
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1353.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1332.621 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2657 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 166 instances
@@ -1880,11 +2014,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instance 
 
 INFO: [Common 17-83] Releasing license: Synthesis
-303 Infos, 42 Warnings, 0 Critical Warnings and 0 Errors encountered.
+313 Infos, 45 Warnings, 72 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:57 . Memory (MB): peak = 1353.102 ; gain = 342.645
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:46 . Memory (MB): peak = 1332.621 ; gain = 324.539
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/xillydemo.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file xillydemo_utilization_synth.rpt -pb xillydemo_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 17 15:33:55 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 18 01:22:56 2021...

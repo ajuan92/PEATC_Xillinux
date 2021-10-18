@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1634502675">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1634538026">
   <File Type="PA-TCL" Name="xillydemo.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="xillydemo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="xillydemo_reports.tcl"/>
@@ -98,9 +98,12 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_GS_FPGA_Host"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_GS_Host_FPGA"/>
   <BlockFileSet Type="BlockSrcs" Name="vga_fifo"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_8x2048"/>

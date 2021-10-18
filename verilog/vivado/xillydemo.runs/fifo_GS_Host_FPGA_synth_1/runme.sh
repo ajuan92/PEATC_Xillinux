@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/xillinux-PEATC/verilog/vivado/xillydemo.runs/fifo_GS_Host_FPGA_synth_1'
+HD_PWD='E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/fifo_GS_Host_FPGA_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

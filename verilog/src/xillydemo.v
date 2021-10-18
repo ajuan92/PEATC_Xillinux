@@ -141,19 +141,60 @@ module xillydemo
     .user_irq(user_irq)
 
   );
+
   
-//  fifo_GS_Host_FPGA
-//     (
-//      .clk(bus_clk),
-//      .srst(!user_r_gs_raw_signal_open),
-//      .din(user_w_gs_start_test_data),
-//      .wr_en(wcapture_en),
-//      .rd_en(user_r_gs_raw_signal_rden),
-//      .dout(wvcapture_data),
-//      .full(wcapture_full),
-//      .empty(user_r_gs_raw_signal_empty)
-//      );  
-      
+wire wNwCmd_Read;
+wire [31:0] w32Cmd_Data;
+wire wNwCmd_available;
   
+fifo_GS_Host_FPGA fifo_GS_RX(
+  .clk(bus_clk),
+  .srst(user_w_gs_start_test_open|woActiv),
+  .din(user_w_gs_start_test_data),
+  .wr_en(user_w_gs_start_test_wren),
+  .rd_en(wNwCmd_Read),
+  .dout(w32Cmd_Data),
+  .empty(wNwCmd_available),
+  .full(user_w_gs_start_test_full)
+);
+
+wire [15:0] w16RawSignal;
+wire wRawSignalEna;
+
+fifo_GS_FPGA_Host fifo_GS_TX(
+  .clk(bus_clk),
+  .srst(user_w_gs_start_test_open),
+  .din(w16RawSignal),
+  .wr_en(wRawSignalEna),
+  .rd_en(user_r_gs_raw_signal_rden),
+  .dout(user_r_gs_raw_signal_data),
+  .empty(user_r_gs_raw_signal_eof && user_r_rn_diag_result_empty),
+  .full(1'd0)
+);
+
+wire [15:0] w16Reg;
+wire [7:0] w8Addr;
+wire [7:0] w8SignSelec;
+
+Gs_StateMachin GS_StateMachin(
+    .iClk (bus_clk),
+    .iReset (user_w_gs_start_test_open),
+    .iGS_wdata (w32Cmd_Data),  // Comando
+    .iGS_wren (wNwCmd_available),  //Señal que indica que hay cmd disponible
+    .oGS_wfull (wNwCmd_Read), //Señal para indicar que se leera la fifo
+    // Conexión lectura de señales crudas
+    .i16Reg (w16Reg),
+    .o8Addr (w8Addr),
+    .o8SignSelec (w8SignSelec),
+    // Salida datos crudos obtenidos
+    .oWriteRawSignal (wRawSignalEna),
+    .o16RawSignal (w16RawSignal)
+    );
+     
+GS_RawSignal GS_RawSignal(
+    .o16Reg (w16Reg),
+    .i8Addr (w8Addr),
+    .i8SignSelec (w8SignSelec)
+    );
 
 endmodule

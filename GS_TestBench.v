@@ -37,6 +37,7 @@ wire [7:0] w8Addr;
 wire [7:0] w8SignSelec;
 
 wire [15:0] w16RawSignal;
+wire [15:0] w16FIFORawSignal;
 
 initial
 begin
@@ -63,21 +64,21 @@ begin
     rWr_en = 1'b0;
     
     r32Cmd_Data = 32'h28FFFFFF;
-    #150
+    #300
     rWr_en = 1'b1;
     #8
     rWr_en = 1'b0;
     
     r32Cmd_Data = 32'h32FFFFFF;
-    #150
+    #300
     rWr_en = 1'b1;
     #8
     rWr_en = 1'b0;
-    #150  
+    #300  
     $finish;
 end
 
-fifo_GS_Host_FPGA dut_fifo(
+fifo_GS_Host_FPGA dut_fifo_GS_RX(
   .clk(rClk),
   .srst(rReset|woActiv),
   .din(r32Cmd_Data),
@@ -85,6 +86,16 @@ fifo_GS_Host_FPGA dut_fifo(
   .rd_en(wNwCmd_Accept),
   .dout(w32Cmd_Data),
   .empty(wNwCmd_ab)
+);
+
+fifo_GS_FPGA_Host dut_fifo_GS_TX(
+  .clk(rClk),
+  .srst(rReset),
+  .din(w16RawSignal),
+  .wr_en(woActiv),
+  .rd_en(~woActiv),
+  .dout(w16FIFORawSignal),
+  .empty()
 );
 
 Gs_StateMachin dut_StateMachin(

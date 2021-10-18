@@ -61,8 +61,7 @@ COMPONENT fifo_GS_Host_FPGA
     rd_en : IN STD_LOGIC;
     dout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     full : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC;
-    data_count : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+    empty : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -80,8 +79,7 @@ your_instance_name : fifo_GS_Host_FPGA
     rd_en => rd_en,
     dout => dout,
     full => full,
-    empty => empty,
-    data_count => data_count
+    empty => empty
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 
