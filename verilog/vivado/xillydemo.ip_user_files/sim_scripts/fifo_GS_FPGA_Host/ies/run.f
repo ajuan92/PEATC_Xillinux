@@ -1,14 +1,3 @@
--makelib ies_lib/xilinx_vip -sv \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
-  "E:/Vivado/2020.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
--endlib
 -makelib ies_lib/xpm -sv \
   "E:/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
   "E:/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \

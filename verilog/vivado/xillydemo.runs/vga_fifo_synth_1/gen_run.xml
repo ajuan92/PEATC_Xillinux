@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="vga_fifo_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1632614881">
+<GenRun Id="vga_fifo_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1636841836">
   <File Type="PA-TCL" Name="vga_fifo.tcl"/>
   <File Type="REPORTS-TCL" Name="vga_fifo_reports.tcl"/>
   <File Type="RDS-RDS" Name="vga_fifo.vds"/>

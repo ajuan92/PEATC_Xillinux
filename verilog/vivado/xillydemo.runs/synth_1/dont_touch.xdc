@@ -33,6 +33,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==vivado_system_p
 # IP: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_0/vivado_system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==vivado_system_auto_pc_0 || ORIG_REF_NAME==vivado_system_auto_pc_0} -quiet] -quiet
 
+# IP: ip/fifo_GS_Host_FPGA/fifo_GS_Host_FPGA.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fifo_GS_Host_FPGA || ORIG_REF_NAME==fifo_GS_Host_FPGA} -quiet] -quiet
+
+# IP: ip/fifo_GS_FPGA_Host/fifo_GS_FPGA_Host.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fifo_GS_FPGA_Host || ORIG_REF_NAME==fifo_GS_FPGA_Host} -quiet] -quiet
+
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==vivado_system_processing_system7_0_0 || ORIG_REF_NAME==vivado_system_processing_system7_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 

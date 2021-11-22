@@ -1,2 +1,1 @@
 Breakpoint File Version 1.0
-96 true E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/Gs_StateMachin.v

@@ -14,7 +14,11 @@ module xillybus(GPIO_LED, quiesce, MIO, PS_SRSTB, PS_CLK, PS_PORB, DDR_Clk,
   user_w_rn_diag_param_full, user_w_rn_diag_param_open,
   user_r_rn_diag_result_rden, user_r_rn_diag_result_data,
   user_r_rn_diag_result_empty, user_r_rn_diag_result_eof,
-  user_r_rn_diag_result_open);
+  user_r_rn_diag_result_open, user_r_gs_test_rden, user_r_gs_test_data,
+  user_r_gs_test_empty, user_r_gs_test_eof, user_r_gs_test_open,
+  user_r_rn_test_rden, user_r_rn_test_data, user_r_rn_test_empty,
+  user_r_rn_test_eof, user_r_rn_test_open, user_w_fpga_reset_wren,
+  user_w_fpga_reset_data, user_w_fpga_reset_full, user_w_fpga_reset_open);
 
   input  PS_SRSTB;
   input  PS_CLK;
@@ -31,6 +35,13 @@ module xillybus(GPIO_LED, quiesce, MIO, PS_SRSTB, PS_CLK, PS_PORB, DDR_Clk,
   input [31:0] user_r_rn_diag_result_data;
   input  user_r_rn_diag_result_empty;
   input  user_r_rn_diag_result_eof;
+  input [31:0] user_r_gs_test_data;
+  input  user_r_gs_test_empty;
+  input  user_r_gs_test_eof;
+  input [15:0] user_r_rn_test_data;
+  input  user_r_rn_test_empty;
+  input  user_r_rn_test_eof;
+  input  user_w_fpga_reset_full;
   output [3:0] GPIO_LED;
   output  quiesce;
   output  DDR_WEB;
@@ -56,6 +67,13 @@ module xillybus(GPIO_LED, quiesce, MIO, PS_SRSTB, PS_CLK, PS_PORB, DDR_Clk,
   output  user_w_rn_diag_param_open;
   output  user_r_rn_diag_result_rden;
   output  user_r_rn_diag_result_open;
+  output  user_r_gs_test_rden;
+  output  user_r_gs_test_open;
+  output  user_r_rn_test_rden;
+  output  user_r_rn_test_open;
+  output  user_w_fpga_reset_wren;
+  output [7:0] user_w_fpga_reset_data;
+  output  user_w_fpga_reset_open;
   inout [53:0] MIO;
   inout  DDR_Clk;
   inout  DDR_Clk_n;
@@ -278,6 +296,16 @@ module xillybus(GPIO_LED, quiesce, MIO, PS_SRSTB, PS_CLK, PS_PORB, DDR_Clk,
     .user_r_rn_diag_result_empty_w(user_r_rn_diag_result_empty),
     .M_AXI_ACP_BVALID_w(M_AXI_ACP_BVALID), .user_r_rn_diag_result_eof_w(user_r_rn_diag_result_eof),
     .user_r_rn_diag_result_open_w(user_r_rn_diag_result_open),
-    .M_AXI_ACP_BRESP_w(M_AXI_ACP_BRESP), .host_interrupt_w(host_interrupt));
+    .M_AXI_ACP_BRESP_w(M_AXI_ACP_BRESP), .host_interrupt_w(host_interrupt),
+    .user_r_gs_test_rden_w(user_r_gs_test_rden), .user_r_gs_test_data_w(user_r_gs_test_data),
+    .user_r_gs_test_empty_w(user_r_gs_test_empty),
+    .user_r_gs_test_eof_w(user_r_gs_test_eof), .user_r_gs_test_open_w(user_r_gs_test_open),
+    .user_r_rn_test_rden_w(user_r_rn_test_rden), .user_r_rn_test_data_w(user_r_rn_test_data),
+    .user_r_rn_test_empty_w(user_r_rn_test_empty),
+    .user_r_rn_test_eof_w(user_r_rn_test_eof), .user_r_rn_test_open_w(user_r_rn_test_open),
+    .user_w_fpga_reset_wren_w(user_w_fpga_reset_wren),
+    .user_w_fpga_reset_data_w(user_w_fpga_reset_data),
+    .user_w_fpga_reset_full_w(user_w_fpga_reset_full),
+    .user_w_fpga_reset_open_w(user_w_fpga_reset_open));
 
 endmodule
