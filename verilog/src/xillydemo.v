@@ -230,7 +230,7 @@ fifo_GS_Host_FPGA fifo_GS_RX(
 Gs_StateMachin GS_StateMachin(
     .iClk (bus_clk),
     .iReset (user_w_fpga_reset_open),
-    .iGS_wdata ({w32Cmd_Data[7:0],w32Cmd_Data[15:8],w32Cmd_Data[23:16],w32Cmd_Data[31:24]}),  // Comando
+    .iGS_wdata ({w32Cmd_Data[31:24],w32Cmd_Data[23:16],w32Cmd_Data[15:8],w32Cmd_Data[7:0]}),  // Comando
     .iGS_wren (wNwCmd_available),  //Señal que indica que hay cmd disponible
     .oGS_wfull (wNwCmd_Read), //Señal para indicar que se leera la fifo
     .oGS_32Cmd (w32Cmd_AcceptTest),

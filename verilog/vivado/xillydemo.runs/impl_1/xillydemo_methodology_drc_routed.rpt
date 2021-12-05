@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sun Nov 21 21:51:15 2021
+| Date         : Sun Dec  5 16:10:11 2021
 | Host         : DESKTOP-L44A16B running 64-bit major release  (build 9200)
 | Command      : report_methodology -file xillydemo_methodology_drc_routed.rpt -pb xillydemo_methodology_drc_routed.pb -rpx xillydemo_methodology_drc_routed.rpx
 | Design       : xillydemo
@@ -23,10 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 82
+             Violations found: 83
 +-----------+----------+------------------------------------------------------+------------+
 | Rule      | Severity | Description                                          | Violations |
 +-----------+----------+------------------------------------------------------+------------+
+| SYNTH-6   | Warning  | Timing of a RAM block might be sub-optimal           | 1          |
 | TIMING-9  | Warning  | Unknown CDC Logic                                    | 1          |
 | TIMING-10 | Warning  | Missing property on synchronizer                     | 1          |
 | TIMING-18 | Warning  | Missing input or output delay                        | 60         |
@@ -37,6 +38,11 @@ Table of Contents
 
 2. REPORT DETAILS
 -----------------
+SYNTH-6#1 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance GS_StateMachin/r8Addr_q_reg_rep, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
 TIMING-9#1 Warning
 Unknown CDC Logic  
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities

@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Nov 21 21:46:15 2021
-# Process ID: 7492
+# Start of session at: Sun Dec  5 16:04:34 2021
+# Process ID: 6220
 # Current directory: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1
 # Command line: vivado.exe -log xillydemo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xillydemo.tcl
 # Log file: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/xillydemo.vds
