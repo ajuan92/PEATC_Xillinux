@@ -32,9 +32,15 @@ wire wNwCmd_ab, wNwCmd_Accept;
 wire [31:0] w32Cmd_Data;
 wire woActiv;
 wire woReqCheck;
+wire [31:0]w32CmdForRaw;
 
 wire [15:0] w16Reg;
-wire [7:0] w8Addr;
+
+wire [7:0] w8Addr_GS;
+wire [7:0] w8Addr_New;
+
+wire wRawDataReady;
+
 wire wSignSelec;
 
 wire [15:0] w16RawSignal;
@@ -105,21 +111,35 @@ Gs_StateMachin dut_StateMachin(
     .iGS_wdata (w32Cmd_Data),  // Comando
     .iGS_wren (wNwCmd_ab),  //Señal que indica que hay cmd disponible
     .oGS_wfull (wNwCmd_Accept), //Señal para indicar que se leera la fifo
+    .oGS_32Cmd (w32CmdForRaw),
     .oGS_RegAcCmd (woReqCheck),
+    .iGS_RawDataReady (wRawDataReady),
     
     // Conexión lectura de señales crudas
     .i16Reg (w16Reg),
-    .o8Addr (w8Addr),
+    .o8Addr (w8Addr_GS),
     .oSignSelec (wSignSelec),
     // Salida datos crudos obtenidos
     .oWriteRawSignal (woActiv),
     .o16RawSignal (w16RawSignal)
     );
-     
+
+GS_SimSignal dut_SimSignal(
+    .iClk(rClk),
+    .iReset(rReset | wNwCmd_Accept),
+    .iGS_32Cmd(w32CmdForRaw),
+    
+    .o8Addr(w8Addr_New),
+    .i8Addr(w8Addr_GS),
+    
+    .oGS_RawDataReady(wRawDataReady)
+    );
+
+  
 GS_RawSignal dut_RawSignal(
     .iClk (rClk),
     .o16Reg (w16Reg),
-    .i8Addr (w8Addr),
+    .i8Addr (w8Addr_New),
     .iSignSelec (wSignSelec)
     );
 

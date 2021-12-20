@@ -88,11 +88,14 @@ wire [31:0] w32Cmd_Data;
 wire [31:0] w32Cmd_AcceptTest;
 wire wRegCmdTest;
 
+wire [31:0]w32CmdForRaw;
+wire wRawDataReady;
 wire wNwCmd_available;
 wire [15:0] w16RawSignal;
 wire wRawSignalEna;
 wire [15:0] w16Reg;
-wire [7:0] w8Addr;
+wire [7:0] w8Addr_GS;
+wire [7:0] w8Addr_New;
 wire [7:0] wSignSelec;
 
 assign PS_GPIO[24] = bus_clk;
@@ -235,9 +238,10 @@ Gs_StateMachin GS_StateMachin(
     .oGS_wfull (wNwCmd_Read), //Señal para indicar que se leera la fifo
     .oGS_32Cmd (w32Cmd_AcceptTest),
     .oGS_RegAcCmd (wRegCmdTest),
+    .iGS_RawDataReady (wRawDataReady),
     // Conexión lectura de señales crudas
     .i16Reg (w16Reg),
-    .o8Addr (w8Addr),
+    .o8Addr (w8Addr_GS),
     .oSignSelec (wSignSelec),
     // Salida datos crudos obtenidos
     .oWriteRawSignal (wRawSignalEna),
@@ -247,7 +251,7 @@ Gs_StateMachin GS_StateMachin(
 fifo_GS_Host_FPGA fifo_GS_RX_TEST(
   .clk(bus_clk),
   .srst(user_w_fpga_reset_open),
-  .din({w32Cmd_Data[31:24],w32Cmd_Data[15:8],w8Addr,w16Reg[7:0]}),
+  .din({w32Cmd_Data[31:24],w32Cmd_Data[15:8],w8Addr_GS,w16Reg[7:0]}),
   .wr_en(wRawSignalEna),
   .rd_en(user_r_gs_test_rden),
   .dout(user_r_gs_test_data),
@@ -267,11 +271,22 @@ fifo_GS_FPGA_Host fifo_GS_TX(
 );
 
 
+GS_SimSignal SimSignal(
+    .iClk(bus_clk),
+    .iReset(user_w_fpga_reset_open | wNwCmd_Read),
+    .iGS_32Cmd(w32Cmd_AcceptTest),
+    
+    .o8Addr(w8Addr_New),
+    .i8Addr(w8Addr_GS),
+    
+    .oGS_RawDataReady(wRawDataReady)
+    );
+
      
 GS_RawSignal  RawSignal(
     .iClk (bus_clk),
     .o16Reg (w16Reg),
-    .i8Addr (w8Addr),
+    .i8Addr (w8Addr_New),
     .iSignSelec (wSignSelec)
     );
 

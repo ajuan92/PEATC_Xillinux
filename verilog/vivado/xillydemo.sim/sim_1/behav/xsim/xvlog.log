@@ -150,5 +150,7 @@ INFO: [VRFC 10-311] analyzing module Gs_StateMachin
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_RawSignal.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module GS_RawSignal
 WARNING: [VRFC 10-3676] redeclaration of ansi port 'o16Reg' is not allowed [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_RawSignal.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_SimSignal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GS_SimSignal
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sim_1/new/GS_TestBench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module GS_TestBench

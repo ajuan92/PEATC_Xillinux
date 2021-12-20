@@ -28,6 +28,7 @@ module Gs_StateMachin(
     output oGS_wfull, //Señal para indicar que se leera la fifo
     output [31:0] oGS_32Cmd,
     output oGS_RegAcCmd,
+    input iGS_RawDataReady,
     
     // Conexión lectura de señales crudas
     
@@ -41,14 +42,14 @@ module Gs_StateMachin(
 
 parameter [7:0]STATE_IDLE = 8'd0;
 parameter [7:0]STATE_GET_CMD = 8'd1;
-parameter [7:0]STATE_READ_CMD = 8'd2;
-parameter [7:0]STATE_STOP_READ_CMD = 8'd3;
+parameter [7:0]STATE_WAIT_RAW_DATA = 8'd2;
+parameter [7:0]STATE_STOP_RAW_DATA = 8'd3;
 parameter [7:0]STATE_SIGNAL_DB = 8'd4;
 
 
 parameter [7:0]MAX_RAW_SIGNAL = 8'd66;
 
-reg [7:0] r8SimSignalOffset = 8'h0;
+reg [7:0] r8SignalOffset = 8'h0;
 
 reg rGetCmd_q, rGetCmd_d = 1'h0;
 reg  rNewCmd_d, rNewCmd_q = 1'd0; 
@@ -59,7 +60,7 @@ reg [31:0] r32Cmd_d, r32Cmd_q = 32'd0;
 reg [15:0] r16Reg_q, r16Reg_d = 16'd0;
 reg rAddr_Comp = 1'd0;
 reg [8:0] r8Addr_q, r8Addr_d = 8'd0;
-//reg [7:0] r8SignSelec_q, r8SignSelec_d = 8'd0; 
+reg [8:0] r8StopCount_q, r8StopCount_d = 8'd0;
 reg rWriteRawSignal_q, rWriteRawSignal_d = 1'd0;
 
 assign oGS_wfull = rRead_en_q;
@@ -82,10 +83,8 @@ begin
         r16Reg_q <= 16'd0; 
         r8Addr_q <= 8'd0; 
         rWriteRawSignal_q <= 1'd0; 
-        rGetCmd_q <= 1'd0; 
-        
-//        r8SignSelec_q <= 8'd0; 
-             
+        rGetCmd_q <= 1'd0;  
+        r8StopCount_q <= 8'd0;  
     end
     else
     begin
@@ -99,22 +98,10 @@ begin
         
         rGetCmd_q <= rGetCmd_d; 
         rWriteRawSignal_q <= rWriteRawSignal_d;
-
-        
+        r8StopCount_q <= r8StopCount_d;
     end 
     
  end  
-
-
-//always@(posedge iClk )
-//begin
-
-//    if(rGetCmd_q)
-//    begin
-//        r8SignSelec_q <= r8SignSelec_d;
-//    end
-
-//end
 
 
 always@(negedge iClk)
@@ -136,38 +123,43 @@ begin
         
             if(r32Cmd_q != 32'd0)
             begin                
-                r8GS_States_d = STATE_READ_CMD;
+                r8GS_States_d = STATE_WAIT_RAW_DATA;
             end
             else
             begin
                 r8GS_States_d = STATE_GET_CMD;
             end
-        STATE_READ_CMD:
+        STATE_WAIT_RAW_DATA:
             
             if(rGetCmd_q != 8'd0)
-            begin                
-                r8GS_States_d = STATE_STOP_READ_CMD;
-            end
-            else
-            begin
-                r8GS_States_d = STATE_READ_CMD;
-            end
-             
-        STATE_STOP_READ_CMD:
-        
-             r8GS_States_d = STATE_SIGNAL_DB;
-            
-        STATE_SIGNAL_DB: 
-        
-            if(r8Addr_q  < (r8SimSignalOffset + MAX_RAW_SIGNAL + 8'd1))
             begin                
                 r8GS_States_d = STATE_SIGNAL_DB;
             end
             else
             begin
-                r8GS_States_d = STATE_IDLE;
+                r8GS_States_d = STATE_WAIT_RAW_DATA;
+            end            
+        STATE_SIGNAL_DB: 
+        
+            if(r8Addr_q  < (MAX_RAW_SIGNAL - 8'd1))
+            begin                
+                r8GS_States_d = STATE_SIGNAL_DB;
             end
-                  
+            else
+            begin
+                r8GS_States_d = STATE_STOP_RAW_DATA;
+            end
+        STATE_STOP_RAW_DATA:
+        
+            if(r8StopCount_q >= 8'd1)
+            begin                
+                r8GS_States_d = STATE_IDLE;   
+            end
+            else
+            begin
+                r8GS_States_d = STATE_STOP_RAW_DATA;
+            end
+   
         default:            
             r8GS_States_d = STATE_IDLE;
     endcase
@@ -181,43 +173,21 @@ begin
         rNewCmd_d =  1'd0;
     end
     
+    if(r8GS_States_q == STATE_IDLE)
+    begin
+        rWriteRawSignal_d = 1'd0;
+    end
+    
     if(r8GS_States_q == STATE_GET_CMD)
     begin
         rRead_en_d = 1'd1;
-        r8SimSignalOffset = 8'd0;
+        r8SignalOffset = 8'd0;
     end
     else
     begin
         rRead_en_d = 1'd0;
     end 
-    
-    if(r8GS_States_q == STATE_READ_CMD)
-    begin
-        rGetCmd_d = 1'h1;
         
-        if(r32Cmd_q[31:24] == 8'd30)
-        begin
-            r8SimSignalOffset = 8'd0;
-        end
-        else if(r32Cmd_q[31:24] == 8'd40)
-        begin
-            r8SimSignalOffset = MAX_RAW_SIGNAL + 8'd1;
-        end
-        else if(r32Cmd_q[31:24] == 8'd50)
-        begin
-            r8SimSignalOffset = (MAX_RAW_SIGNAL*2) + 8'd1;
-        end
-        else 
-        begin
-            r8SimSignalOffset = 8'd0;
-        end
-        
-    end
-    else
-    begin
-        rGetCmd_d = 1'h0;
-    end 
-    
     if(r8GS_States_q == STATE_SIGNAL_DB)
     begin
         rWriteRawSignal_d = 1'd1;
@@ -225,10 +195,18 @@ begin
     end
     else
     begin
-        rWriteRawSignal_d = 1'd0;
-        r8Addr_d = r8SimSignalOffset;
+        r8Addr_d = r8SignalOffset;
     end   
     
+    if(r8GS_States_q == STATE_STOP_RAW_DATA)
+    begin
+        r8StopCount_d = r8StopCount_q + 8'd1;
+    end
+    else
+    begin
+        r8StopCount_d = 8'd0;
+    end   
+
 end
 
 
@@ -236,7 +214,7 @@ always@*
 begin
     r32Cmd_d = iGS_wdata;
     r16Reg_d = i16Reg;
-//    r8SignSelec_d = r32Cmd_q[31:24];
+    rGetCmd_d = iGS_RawDataReady;
 end
 
 
