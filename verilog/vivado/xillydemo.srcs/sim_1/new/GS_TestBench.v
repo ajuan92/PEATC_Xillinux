@@ -108,20 +108,20 @@ fifo_GS_FPGA_Host dut_fifo_GS_TX(
 Gs_StateMachin dut_StateMachin(
     .iClk (rClk),
     .iReset (rReset),
-    .iGS_wdata (w32Cmd_Data),  // Comando
-    .iGS_wren (wNwCmd_ab),  //Señal que indica que hay cmd disponible
-    .oGS_wfull (wNwCmd_Accept), //Señal para indicar que se leera la fifo
+    .iGS_32NewCmdData (w32Cmd_Data),  // Comando
+    .iGS_NwCmd (wNwCmd_ab),  //Señal que indica que hay cmd disponible
+    .oGS_FifoReadEn (wNwCmd_Accept), //Señal para indicar que se leera la fifo
     .oGS_32Cmd (w32CmdForRaw),
     .oGS_RegAcCmd (woReqCheck),
     .iGS_RawDataReady (wRawDataReady),
     
     // Conexión lectura de señales crudas
-    .i16Reg (w16Reg),
-    .o8Addr (w8Addr_GS),
-    .oSignSelec (wSignSelec),
+    .iGS_16Reg (w16Reg),
+    .oGS_8Addr (w8Addr_GS),
+    .oGS_SignSelec (wSignSelec),
     // Salida datos crudos obtenidos
-    .oWriteRawSignal (woActiv),
-    .o16RawSignal (w16RawSignal)
+    .oGS_WriteRawSignal (woActiv),
+    .oGS_16RawSignal (w16RawSignal)
     );
 
 GS_SimSignal dut_SimSignal(
@@ -129,7 +129,7 @@ GS_SimSignal dut_SimSignal(
     .iReset(rReset | wNwCmd_Accept),
     .iGS_32Cmd(w32CmdForRaw),
     
-    .o8Addr(w8Addr_New),
+    .oGS_8Addr(w8Addr_New),
     .i8Addr(w8Addr_GS),
     
     .oGS_RawDataReady(wRawDataReady)

@@ -26,8 +26,8 @@ module GS_SimSignal(
     input [31:0] iGS_32Cmd,
     
     input [15:0] i16Reg,
-    output [7:0] o8Addr,
-    output [7:0] oSignSelec,
+    output [7:0] oGS_8Addr,
+    output [7:0] oGS_SignSelec,
     
     output [15:0] o16Reg,
     input [7:0] i8Addr,
@@ -46,8 +46,8 @@ reg [7:0] r8SimSignalOffset = 8'h0;
 reg [31:0] r32Cmd_d, r32Cmd_q  = 32'h0;
 
 assign o16Reg = i16Reg;
-assign o8Addr = r8NewAddr_q;
-assign oSignSelec = iSignSelec;
+assign oGS_8Addr = r8NewAddr_q;
+assign oGS_SignSelec = iSignSelec;
 assign oGS_RawDataReady = rRawDataReady;
     
 always@(posedge iClk)

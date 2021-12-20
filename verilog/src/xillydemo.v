@@ -233,19 +233,28 @@ fifo_GS_Host_FPGA fifo_GS_RX(
 Gs_StateMachin GS_StateMachin(
     .iClk (bus_clk),
     .iReset (user_w_fpga_reset_open),
-    .iGS_wdata ({w32Cmd_Data[31:24],w32Cmd_Data[23:16],w32Cmd_Data[15:8],w32Cmd_Data[7:0]}),  // Comando
-    .iGS_wren (wNwCmd_available),  //Señal que indica que hay cmd disponible
-    .oGS_wfull (wNwCmd_Read), //Señal para indicar que se leera la fifo
+    // Comando de 32 bits con los parámetros para la prueba de PEATC
+    .iGS_32NewCmdData ({w32Cmd_Data[31:24],w32Cmd_Data[23:16],w32Cmd_Data[15:8],w32Cmd_Data[7:0]}),
+    //Señal que indica que hay comando disponible en la fifo
+    .iGS_NwCmd (wNwCmd_available),
+    //Señal para indicar que se leerá el comando de la fifo RX, activa el ReadEnable de la Fifo
+    .oGS_FifoReadEn (wNwCmd_Read),
+    // Comando Capturado de la fifo
     .oGS_32Cmd (w32Cmd_AcceptTest),
-    .oGS_RegAcCmd (wRegCmdTest),
+    //Señal que indica que la señal cruda de PEATC está lista para ser leída
     .iGS_RawDataReady (wRawDataReady),
-    // Conexión lectura de señales crudas
-    .i16Reg (w16Reg),
-    .o8Addr (w8Addr_GS),
-    .oSignSelec (wSignSelec),
-    // Salida datos crudos obtenidos
-    .oWriteRawSignal (wRawSignalEna),
-    .o16RawSignal (w16RawSignal)
+    //Valor de la muestra de la señal cruda de PEATC
+    .iGS_16Reg (w16Reg),
+    //Dirección en memoria de una muestra de la señal cruda de PEATC
+    .oGS_8Addr (w8Addr_GS),
+    //Enable para la memoria donde se almacena la señal cruda de PEATC
+    .oGS_SignSelec (wSignSelec),
+    //Señal para escribir en la fifo TX
+    .oGS_WriteRawSignal (wRawSignalEna),
+    //Valor de la muestra de la señal cruda de PEATC a escribirse en la fifo Tx
+    .oGS_16RawSignal (w16RawSignal),
+    //Salida de check point para pruebas
+    .oGS_RegAcCmd (wRegCmdTest)
     );
 
 fifo_GS_Host_FPGA fifo_GS_RX_TEST(
@@ -270,13 +279,13 @@ fifo_GS_FPGA_Host fifo_GS_TX(
   .full(1'd0)
 );
 
-
+//----------------------------IMPLEMENTACIÓN DE SIMULACION PARA PRUEBAS---------------------------------
 GS_SimSignal SimSignal(
     .iClk(bus_clk),
     .iReset(user_w_fpga_reset_open | wNwCmd_Read),
     .iGS_32Cmd(w32Cmd_AcceptTest),
     
-    .o8Addr(w8Addr_New),
+    .oGS_8Addr(w8Addr_New),
     .i8Addr(w8Addr_GS),
     
     .oGS_RawDataReady(wRawDataReady)
@@ -317,16 +326,16 @@ GS_RawSignal  RawSignal(
 //Gs_StateMachin GS_StateMachin(
 //    .iClk (bus_clk),
 //    .iReset (!user_w_gs_start_test_open),
-//    .iGS_wdata (w32Cmd_Data),  // Comando
-//    .iGS_wren (wNwCmd_available),  //Señal que indica que hay cmd disponible
-//    .oGS_wfull (wNwCmd_Read), //Señal para indicar que se leera la fifo
+//    .iGS_32NewCmdData (w32Cmd_Data),  // Comando
+//    .iGS_NwCmd (wNwCmd_available),  //Señal que indica que hay cmd disponible
+//    .oGS_FifoReadEn (wNwCmd_Read), //Señal para indicar que se leera la fifo
 //    // Conexión lectura de señales crudas
-//    .i16Reg (w16Reg),
-//    .o8Addr (w8Addr),
+//    .iGS_16Reg (w16Reg),
+//    .oGS_8Addr (w8Addr),
 //    .o8SignSelec (wSignSelec),
 //    // Salida datos crudos obtenidos
-//    .oWriteRawSignal (wRawSignalEna),
-//    .o16RawSignal (w16RawSignal)
+//    .oGS_WriteRawSignal (wRawSignalEna),
+//    .oGS_16RawSignal (w16RawSignal)
 //    );
      
 //GS_RawSignal GS_RawSignal(

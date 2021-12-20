@@ -23,21 +23,19 @@
 module Gs_StateMachin(
     input iClk,
     input iReset,
-    input [31:0] iGS_wdata, // Comando
-    input iGS_wren, //Señal que indica que hay cmd disponible
-    output oGS_wfull, //Señal para indicar que se leera la fifo
-    output [31:0] oGS_32Cmd,
-    output oGS_RegAcCmd,
-    input iGS_RawDataReady,
+    input [31:0] iGS_32NewCmdData, // Comando de 32 bits con los parámetros para la prueba de PEATC
+    input iGS_NwCmd, //Señal que indica que hay comando disponible en la fifo
+    output oGS_FifoReadEn, //Señal para indicar que se leerá el comando de la fifo RX, activa el ReadEnable de la Fifo
+    output [31:0] oGS_32Cmd, // Comando Capturado de la fifo
+    input iGS_RawDataReady, //Señal que indica que la señal cruda de PEATC está lista para ser leída
+       
+    input [15:0] iGS_16Reg, //Valor de la muestra de la señal cruda de PEATC
+    output [7:0] oGS_8Addr, //Dirección en memoria de una muestra de la señal cruda de PEATC
+    output [7:0] oGS_SignSelec, //Enable para la memoria donde se almacena la señal cruda de PEATC
     
-    // Conexión lectura de señales crudas
-    
-    input [15:0] i16Reg,
-    output [7:0] o8Addr,
-    output [7:0] oSignSelec,
-    
-    output oWriteRawSignal, //Señal para escribir en la fifo
-    output [15:0] o16RawSignal
+    output oGS_WriteRawSignal, //Señal para escribir en la fifo TX
+    output [15:0] oGS_16RawSignal, //Valor de la muestra de la señal cruda de PEATC a escribirse en la fifo Tx
+    output oGS_RegAcCmd // Salida de check point para pruebas
     );
 
 parameter [7:0]STATE_IDLE = 8'd0;
@@ -63,11 +61,11 @@ reg [8:0] r8Addr_q, r8Addr_d = 8'd0;
 reg [8:0] r8StopCount_q, r8StopCount_d = 8'd0;
 reg rWriteRawSignal_q, rWriteRawSignal_d = 1'd0;
 
-assign oGS_wfull = rRead_en_q;
-assign o16RawSignal = r16Reg_q;
-assign o8Addr = r8Addr_q;
-assign oSignSelec = rWriteRawSignal_q;
-assign oWriteRawSignal = rWriteRawSignal_q;
+assign oGS_FifoReadEn = rRead_en_q;
+assign oGS_16RawSignal = r16Reg_q;
+assign oGS_8Addr = r8Addr_q;
+assign oGS_SignSelec = rWriteRawSignal_q;
+assign oGS_WriteRawSignal = rWriteRawSignal_q;
 assign oGS_32Cmd = r32Cmd_q;
 assign oGS_RegAcCmd = rGetCmd_q;
 
@@ -164,7 +162,7 @@ begin
             r8GS_States_d = STATE_IDLE;
     endcase
     
-    if(iGS_wren == 0)
+    if(iGS_NwCmd == 0)
     begin
         rNewCmd_d =  1'd1;
     end
@@ -212,8 +210,8 @@ end
 
 always@*
 begin
-    r32Cmd_d = iGS_wdata;
-    r16Reg_d = i16Reg;
+    r32Cmd_d = iGS_32NewCmdData;
+    r16Reg_d = iGS_16Reg;
     rGetCmd_d = iGS_RawDataReady;
 end
 
