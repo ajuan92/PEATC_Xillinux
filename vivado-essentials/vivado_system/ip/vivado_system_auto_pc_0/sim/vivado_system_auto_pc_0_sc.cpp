@@ -77,10 +77,11 @@ vivado_system_auto_pc_0_sc::vivado_system_auto_pc_0_sc(const sc_core::sc_module_
     model_param_props.addLong("C_AXI_BUSER_WIDTH", "1");
     model_param_props.addLong("C_TRANSLATION_MODE", "2");
     model_param_props.addString("C_FAMILY", "zynq");
+    model_param_props.addString("COMPONENT_NAME", "vivado_system_auto_pc_0");
 
   mp_impl = new axi_protocol_converter("inst", model_param_props);
 
-  // initialize sockets
+  // initialize AXI sockets
   target_rd_socket = mp_impl->target_rd_socket;
   target_wr_socket = mp_impl->target_wr_socket;
   initiator_rd_socket = mp_impl->initiator_rd_socket;

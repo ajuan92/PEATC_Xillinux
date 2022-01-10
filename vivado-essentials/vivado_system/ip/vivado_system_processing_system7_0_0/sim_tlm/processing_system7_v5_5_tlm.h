@@ -63,6 +63,7 @@
 #include "genattr.h"
 #include "xilinx-zynq.h"
 #include "b_transport_converter.h"
+#include "utils/xtlm_aximm_fifo.h"
 
 /***************************************************************************************
 *
@@ -205,9 +206,9 @@ processing_system7_v5_5_tlm(sc_core::sc_module_name name,
     // xtlm initiator sockets of processing_system7_tlm and tlm simple initiator 
     // socket with xilinx_zynq's target socket
     xtlm::xaximm_xtlm2tlm_t<64,32> S_AXI_ACP_xtlm_brdg;
-    zynq_tlm::xsc_xtlm_aximm_tran_buffer *S_AXI_ACP_buff;
+    xtlm::xtlm_aximm_fifo *S_AXI_ACP_buff;
     xtlm::xaximm_xtlm2tlm_t<32,32> S_AXI_HP2_xtlm_brdg;
-    zynq_tlm::xsc_xtlm_aximm_tran_buffer *S_AXI_HP2_buff;
+    xtlm::xtlm_aximm_fifo *S_AXI_HP2_buff;
 
     // This Bridges converts b_transport to nb_transports and also
     // Converts tlm transactions to xtlm transactions.

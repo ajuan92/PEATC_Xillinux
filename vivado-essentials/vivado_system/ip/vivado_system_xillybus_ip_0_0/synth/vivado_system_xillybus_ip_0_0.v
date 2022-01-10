@@ -50,7 +50,7 @@
 // IP VLNV: xillybus:xillybus:xillybus_ip:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "xillybus_ip,Vivado 2020.1" *)
+(* X_CORE_INFO = "xillybus_ip,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "vivado_system_xillybus_ip_0_0,xillybus_ip,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module vivado_system_xillybus_ip_0_0 (

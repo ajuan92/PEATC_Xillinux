@@ -299,49 +299,4 @@ GS_RawSignal  RawSignal(
     .iSignSelec (wSignSelec)
     );
 
-   
-//fifo_GS_Host_FPGA fifo_GS_RX(
-//  .clk(bus_clk),
-//  .srst(!user_w_gs_start_test_open),
-//  .din({user_w_gs_start_test_data,24'd0}),
-//  .wr_en(user_w_gs_start_test_wren),
-//  .rd_en(wNwCmd_Read),
-//  .dout(w32Cmd_Data),
-//  .empty(wNwCmd_available),
-//  .full(user_w_gs_start_test_full)
-//);
-
-
-//fifo_GS_FPGA_Host fifo_GS_TX(
-//  .clk(bus_clk),
-//  .srst(!user_r_gs_raw_signal_open),
-//  .din(w16RawSignal),
-//  .wr_en(wRawSignalEna),
-//  .rd_en(user_r_gs_raw_signal_rden),
-//  .dout(user_r_gs_raw_signal_data),
-//  .empty(user_r_gs_raw_signal_eof && user_r_rn_diag_result_empty),
-//  .full(1'd0)
-//);
-
-//Gs_StateMachin GS_StateMachin(
-//    .iClk (bus_clk),
-//    .iReset (!user_w_gs_start_test_open),
-//    .iGS_32NewCmdData (w32Cmd_Data),  // Comando
-//    .iGS_NwCmd (wNwCmd_available),  //Señal que indica que hay cmd disponible
-//    .oGS_FifoReadEn (wNwCmd_Read), //Señal para indicar que se leera la fifo
-//    // Conexión lectura de señales crudas
-//    .iGS_16Reg (w16Reg),
-//    .oGS_8Addr (w8Addr),
-//    .o8SignSelec (wSignSelec),
-//    // Salida datos crudos obtenidos
-//    .oGS_WriteRawSignal (wRawSignalEna),
-//    .oGS_16RawSignal (w16RawSignal)
-//    );
-     
-//GS_RawSignal GS_RawSignal(
-//    .o16Reg (w16Reg),
-//    .i8Addr (w8Addr),
-//    .i8SignSelec (wSignSelec)
-//    );
-
 endmodule

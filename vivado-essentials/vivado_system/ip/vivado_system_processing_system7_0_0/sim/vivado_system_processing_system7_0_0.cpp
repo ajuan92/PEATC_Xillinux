@@ -231,6 +231,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
     mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
     mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S_AXI_ACP' transactor
 
@@ -337,6 +340,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
     mp_impl->S_AXI_ACP_rd_socket->bind(*(mp_S_AXI_ACP_transactor->rd_socket));
     mp_impl->S_AXI_ACP_wr_socket->bind(*(mp_S_AXI_ACP_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S_AXI_HP2' transactor
 
@@ -440,6 +446,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
 
     mp_impl->S_AXI_HP2_rd_socket->bind(*(mp_S_AXI_HP2_transactor->rd_socket));
     mp_impl->S_AXI_HP2_wr_socket->bind(*(mp_S_AXI_HP2_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -620,6 +629,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
     mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
     mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S_AXI_ACP' transactor
 
@@ -726,6 +738,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
     mp_impl->S_AXI_ACP_rd_socket->bind(*(mp_S_AXI_ACP_transactor->rd_socket));
     mp_impl->S_AXI_ACP_wr_socket->bind(*(mp_S_AXI_ACP_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S_AXI_HP2' transactor
 
@@ -829,6 +844,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
 
     mp_impl->S_AXI_HP2_rd_socket->bind(*(mp_S_AXI_HP2_transactor->rd_socket));
     mp_impl->S_AXI_HP2_wr_socket->bind(*(mp_S_AXI_HP2_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -1009,6 +1027,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
     mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
     mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S_AXI_ACP' transactor
 
@@ -1115,6 +1136,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
     mp_impl->S_AXI_ACP_rd_socket->bind(*(mp_S_AXI_ACP_transactor->rd_socket));
     mp_impl->S_AXI_ACP_wr_socket->bind(*(mp_S_AXI_ACP_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S_AXI_HP2' transactor
 
@@ -1219,6 +1243,9 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
     mp_impl->S_AXI_HP2_rd_socket->bind(*(mp_S_AXI_HP2_transactor->rd_socket));
     mp_impl->S_AXI_HP2_wr_socket->bind(*(mp_S_AXI_HP2_transactor->wr_socket));
   }
+  else
+  {
+  }
 
 }
 
@@ -1287,6 +1314,7 @@ vivado_system_processing_system7_0_0::vivado_system_processing_system7_0_0(const
   mp_S_AXI_HP2_AWLOCK_converter = NULL;
   mp_S_AXI_HP2_ARLEN_converter = NULL;
   mp_S_AXI_HP2_AWLEN_converter = NULL;
+
   // Instantiate Socket Stubs
 
   // configure M_AXI_GP0_transactor
@@ -1377,7 +1405,6 @@ vivado_system_processing_system7_0_0::vivado_system_processing_system7_0_0(const
   mp_M_AXI_GP0_transactor->CLK(M_AXI_GP0_ACLK);
   m_M_AXI_GP0_transactor_rst_signal.write(1);
   mp_M_AXI_GP0_transactor->RST(m_M_AXI_GP0_transactor_rst_signal);
-
   // configure S_AXI_ACP_transactor
     xsc::common_cpp::properties S_AXI_ACP_transactor_param_props;
     S_AXI_ACP_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
@@ -1468,7 +1495,6 @@ vivado_system_processing_system7_0_0::vivado_system_processing_system7_0_0(const
   mp_S_AXI_ACP_transactor->CLK(S_AXI_ACP_ACLK);
   m_S_AXI_ACP_transactor_rst_signal.write(1);
   mp_S_AXI_ACP_transactor->RST(m_S_AXI_ACP_transactor_rst_signal);
-
   // configure S_AXI_HP2_transactor
     xsc::common_cpp::properties S_AXI_HP2_transactor_param_props;
     S_AXI_HP2_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
@@ -1558,7 +1584,6 @@ vivado_system_processing_system7_0_0::vivado_system_processing_system7_0_0(const
   m_S_AXI_HP2_transactor_rst_signal.write(1);
   mp_S_AXI_HP2_transactor->RST(m_S_AXI_HP2_transactor_rst_signal);
 
-
   // initialize transactors stubs
   M_AXI_GP0_transactor_initiator_wr_socket_stub = nullptr;
   M_AXI_GP0_transactor_initiator_rd_socket_stub = nullptr;
@@ -1576,6 +1601,7 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
   {
     mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
     mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
+  
   }
   else
   {
@@ -1591,6 +1617,7 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
   {
     mp_impl->S_AXI_ACP_rd_socket->bind(*(mp_S_AXI_ACP_transactor->rd_socket));
     mp_impl->S_AXI_ACP_wr_socket->bind(*(mp_S_AXI_ACP_transactor->wr_socket));
+  
   }
   else
   {
@@ -1606,6 +1633,7 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
   {
     mp_impl->S_AXI_HP2_rd_socket->bind(*(mp_S_AXI_HP2_transactor->rd_socket));
     mp_impl->S_AXI_HP2_wr_socket->bind(*(mp_S_AXI_HP2_transactor->wr_socket));
+  
   }
   else
   {
@@ -1683,6 +1711,7 @@ vivado_system_processing_system7_0_0::vivado_system_processing_system7_0_0(const
   mp_S_AXI_HP2_AWLOCK_converter = NULL;
   mp_S_AXI_HP2_ARLEN_converter = NULL;
   mp_S_AXI_HP2_AWLEN_converter = NULL;
+
   // Instantiate Socket Stubs
 
   // configure M_AXI_GP0_transactor
@@ -1773,7 +1802,6 @@ vivado_system_processing_system7_0_0::vivado_system_processing_system7_0_0(const
   mp_M_AXI_GP0_transactor->CLK(M_AXI_GP0_ACLK);
   m_M_AXI_GP0_transactor_rst_signal.write(1);
   mp_M_AXI_GP0_transactor->RST(m_M_AXI_GP0_transactor_rst_signal);
-
   // configure S_AXI_ACP_transactor
     xsc::common_cpp::properties S_AXI_ACP_transactor_param_props;
     S_AXI_ACP_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
@@ -1864,7 +1892,6 @@ vivado_system_processing_system7_0_0::vivado_system_processing_system7_0_0(const
   mp_S_AXI_ACP_transactor->CLK(S_AXI_ACP_ACLK);
   m_S_AXI_ACP_transactor_rst_signal.write(1);
   mp_S_AXI_ACP_transactor->RST(m_S_AXI_ACP_transactor_rst_signal);
-
   // configure S_AXI_HP2_transactor
     xsc::common_cpp::properties S_AXI_HP2_transactor_param_props;
     S_AXI_HP2_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
@@ -1954,7 +1981,6 @@ vivado_system_processing_system7_0_0::vivado_system_processing_system7_0_0(const
   m_S_AXI_HP2_transactor_rst_signal.write(1);
   mp_S_AXI_HP2_transactor->RST(m_S_AXI_HP2_transactor_rst_signal);
 
-
   // initialize transactors stubs
   M_AXI_GP0_transactor_initiator_wr_socket_stub = nullptr;
   M_AXI_GP0_transactor_initiator_rd_socket_stub = nullptr;
@@ -1972,6 +1998,7 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
   {
     mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
     mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
+  
   }
   else
   {
@@ -1987,6 +2014,7 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
   {
     mp_impl->S_AXI_ACP_rd_socket->bind(*(mp_S_AXI_ACP_transactor->rd_socket));
     mp_impl->S_AXI_ACP_wr_socket->bind(*(mp_S_AXI_ACP_transactor->wr_socket));
+  
   }
   else
   {
@@ -2002,6 +2030,7 @@ void vivado_system_processing_system7_0_0::before_end_of_elaboration()
   {
     mp_impl->S_AXI_HP2_rd_socket->bind(*(mp_S_AXI_HP2_transactor->rd_socket));
     mp_impl->S_AXI_HP2_wr_socket->bind(*(mp_S_AXI_HP2_transactor->wr_socket));
+  
   }
   else
   {

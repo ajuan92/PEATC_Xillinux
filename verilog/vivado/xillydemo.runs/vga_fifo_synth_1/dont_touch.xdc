@@ -6,27 +6,27 @@
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vga_fifo/vga_fifo.xdc
 # XDC: The top module name and the constraint reference have the same name: 'vga_fifo'. Do not add the DONT_TOUCH constraint.
-set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vga_fifo/vga_fifo_clocks.xdc
 # XDC: The top module name and the constraint reference have the same name: 'vga_fifo'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'vga_fifo'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # IP: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vga_fifo/vga_fifo.xci
 # IP: The module: 'vga_fifo' is the root of the design. Do not add the DONT_TOUCH constraint.
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vga_fifo/vga_fifo.xdc
 # XDC: The top module name and the constraint reference have the same name: 'vga_fifo'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vga_fifo/vga_fifo_clocks.xdc
 # XDC: The top module name and the constraint reference have the same name: 'vga_fifo'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'vga_fifo'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet

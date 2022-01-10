@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="fifo_32x512_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1636841836">
+<GenRun Id="fifo_32x512_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1640893379">
   <File Type="PA-TCL" Name="fifo_32x512.tcl"/>
   <File Type="REPORTS-TCL" Name="fifo_32x512_reports.tcl"/>
   <File Type="RDS-RDS" Name="fifo_32x512.vds"/>
@@ -39,7 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
