@@ -117,10 +117,11 @@ vivado_system_processing_system7_0_0_sc::vivado_system_processing_system7_0_0_sc
     model_param_props.addString("C_FCLK_CLK2_BUF", "FALSE");
     model_param_props.addString("C_FCLK_CLK3_BUF", "FALSE");
     model_param_props.addString("C_PACKAGE_NAME", "clg484");
+    model_param_props.addString("COMPONENT_NAME", "vivado_system_processing_system7_0_0");
 
   mp_impl = new processing_system7_v5_5_tlm("inst", model_param_props);
 
-  // initialize sockets
+  // initialize AXI sockets
   M_AXI_GP0_rd_socket = mp_impl->M_AXI_GP0_rd_socket;
   M_AXI_GP0_wr_socket = mp_impl->M_AXI_GP0_wr_socket;
   S_AXI_ACP_rd_socket = mp_impl->S_AXI_ACP_rd_socket;

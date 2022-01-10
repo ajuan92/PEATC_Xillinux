@@ -117,10 +117,10 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cached_ip [config_ip_cache -export -no_bom  -dir E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1 -new_name fifo_8x2048 -ip [get_ips fifo_8x2048]]
+set cacheID [config_ip_cache -export -no_bom  -dir E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1 -new_name fifo_8x2048 -ip [get_ips fifo_8x2048]]
 
 OPTRACE "Configure IP Cache" END { }
-if { $cached_ip eq {} } {
+if { $cacheID == "" } {
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
@@ -152,9 +152,12 @@ catch {
  set TIME_taken [expr [clock seconds] - $TIME_start]
 
  if { [get_msg_config -count -severity {CRITICAL WARNING}] == 0 } {
-  config_ip_cache -add -dcp fifo_8x2048.dcp -move_files $ipCachedFiles -use_project_ipc  -synth_runtime $TIME_taken  -ip [get_ips fifo_8x2048]
+  config_ip_cache -add -dcp fifo_8x2048.dcp -move_files $ipCachedFiles   -synth_runtime $TIME_taken  -ip [get_ips fifo_8x2048]
  }
 OPTRACE "Write IP Cache" END { }
+}
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
 }
 
 rename_ref -prefix_all fifo_8x2048_
@@ -171,7 +174,7 @@ OPTRACE "synth reports" END { }
 if { [catch {
   file copy -force E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
 } _RESULT ] } { 
-  send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+  send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
@@ -206,7 +209,7 @@ if { [catch {
 if { [catch {
   file copy -force E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/fifo_8x2048_synth_1/fifo_8x2048.dcp e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
 } _RESULT ] } { 
-  send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+  send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
@@ -234,7 +237,7 @@ if { [catch {
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
-}; # end if cached_ip 
+}; # end if cacheID 
 
 if {[file isdir E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.ip_user_files/ip/fifo_8x2048]} {
   catch { 

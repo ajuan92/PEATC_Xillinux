@@ -184,7 +184,7 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
         ,PS_CLK("PS_CLK")
         ,PS_PORB("PS_PORB")
     ,S_AXI_ACP_xtlm_brdg("S_AXI_ACP_xtlm_brdg")
-    ,S_AXI_HP2_xtlm_brdg("S_AXI_HP2_xtlm_brdg");
+    ,S_AXI_HP2_xtlm_brdg("S_AXI_HP2_xtlm_brdg")
     ,m_rp_bridge_M_AXI_GP0("m_rp_bridge_M_AXI_GP0")     
         ,FCLK_CLK1_clk("FCLK_CLK1_clk", sc_time(10000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
     ,prop(_prop)
@@ -227,7 +227,7 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
 
         //instantiating XTLM2TLM bridge and stiching it between 
         //S_AXI_ACP_wr/rd_socket sockets to s_axi_acp_fpd target socket of Zynq Qemu tlm wrapper
-        S_AXI_ACP_buff = new zynq_tlm::xsc_xtlm_aximm_tran_buffer("S_AXI_ACP_buff");
+        S_AXI_ACP_buff = new xtlm::xtlm_aximm_fifo("S_AXI_ACP_buff");
         S_AXI_ACP_rd_socket->bind(*S_AXI_ACP_buff->in_rd_socket);
         S_AXI_ACP_wr_socket->bind(*S_AXI_ACP_buff->in_wr_socket);
         S_AXI_ACP_buff->out_wr_socket->bind(*S_AXI_ACP_xtlm_brdg.wr_socket);
@@ -236,7 +236,7 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
 
         //instantiating XTLM2TLM bridge and stiching it between 
         //S_AXI_HP2_wr_socket/rd_socket sockets to s_axi_hp[2] target socket of Zynq Qemu tlm wrapper
-        S_AXI_HP2_buff = new zynq_tlm::xsc_xtlm_aximm_tran_buffer("S_AXI_HP2_buff");
+        S_AXI_HP2_buff = new xtlm::xtlm_aximm_fifo("S_AXI_HP2_buff");
         S_AXI_HP2_rd_socket->bind(*S_AXI_HP2_buff->in_rd_socket);
         S_AXI_HP2_wr_socket->bind(*S_AXI_HP2_buff->in_wr_socket);
         S_AXI_HP2_buff->out_wr_socket->bind(*S_AXI_HP2_xtlm_brdg.wr_socket);

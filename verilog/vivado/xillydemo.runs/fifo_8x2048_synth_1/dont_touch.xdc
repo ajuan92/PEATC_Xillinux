@@ -6,19 +6,19 @@
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/fifo_8x2048/fifo_8x2048.xdc
 # XDC: The top module name and the constraint reference have the same name: 'fifo_8x2048'. Do not add the DONT_TOUCH constraint.
-set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/fifo_8x2048/fifo_8x2048_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'fifo_8x2048'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # IP: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/fifo_8x2048/fifo_8x2048.xci
 # IP: The module: 'fifo_8x2048' is the root of the design. Do not add the DONT_TOUCH constraint.
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/fifo_8x2048/fifo_8x2048.xdc
 # XDC: The top module name and the constraint reference have the same name: 'fifo_8x2048'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/fifo_8x2048/fifo_8x2048_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'fifo_8x2048'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet

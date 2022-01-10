@@ -90,10 +90,11 @@ vivado_system_xbar_0_sc::vivado_system_xbar_0_sc(const sc_core::sc_module_name& 
     model_param_props.addBitString("C_M_AXI_READ_ISSUING", "000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001", 96);
     model_param_props.addBitString("C_S_AXI_ARB_PRIORITY", "00000000000000000000000000000000", 32);
     model_param_props.addBitString("C_M_AXI_SECURE", "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", 96);
+    model_param_props.addString("COMPONENT_NAME", "vivado_system_xbar_0");
 
   mp_impl = new axi_crossbar("inst", model_param_props);
 
-  // initialize sockets
+  // initialize AXI sockets
   target_0_rd_socket = mp_impl->target_0_rd_socket;
   target_0_wr_socket = mp_impl->target_0_wr_socket;
   initiator_0_rd_socket = mp_impl->initiator_0_rd_socket;

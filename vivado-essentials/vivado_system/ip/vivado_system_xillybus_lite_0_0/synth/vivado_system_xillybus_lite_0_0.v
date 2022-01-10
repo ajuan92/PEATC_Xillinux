@@ -138,7 +138,7 @@ output wire [31 : 0] user_addr;
 endmodule
 // End of netlist blackbox
 
-(* X_CORE_INFO = "xillybus_lite,Vivado 2020.1" *)
+(* X_CORE_INFO = "xillybus_lite,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "vivado_system_xillybus_lite_0_0,xillybus_lite,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module vivado_system_xillybus_lite_0_0 (
