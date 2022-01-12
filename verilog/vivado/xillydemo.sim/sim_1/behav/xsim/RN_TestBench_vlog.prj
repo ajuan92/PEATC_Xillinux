@@ -26,6 +26,7 @@ verilog xil_defaultlib  --include "../../../../../../vivado-essentials/vivado_sy
 "../../../../xillydemo.srcs/sources_1/new/GS_RawSignal.v" \
 "../../../../xillydemo.srcs/sources_1/new/GS_SimSignal.v" \
 "../../../../xillydemo.srcs/sources_1/new/Rn_StateMachin.v" \
+"../../../../xillydemo.srcs/sources_1/new/RN_SimResult.v" \
 "../../../../xillydemo.srcs/sim_1/new/GS_TestBench.v" \
 "../../../../xillydemo.srcs/sim_1/new/RN_TestBench.v" \
 

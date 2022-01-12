@@ -196,7 +196,12 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_L
 INFO: [VRFC 10-311] analyzing module GS_SimSignal
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Rn_StateMachin
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RN_SimResult
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sim_1/new/GS_TestBench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module GS_TestBench
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sim_1/new/RN_TestBench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RN_TestBench
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.sim/sim_1/behav/xsim/glbl.v:6]

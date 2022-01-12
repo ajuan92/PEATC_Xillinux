@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Jan  9 17:35:06 2022
-# Process ID: 704
+# Start of session at: Tue Jan 11 19:54:13 2022
+# Process ID: 14316
 # Current directory: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1
 # Command line: vivado.exe -log xillydemo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xillydemo.tcl
 # Log file: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/xillydemo.vds
@@ -23,10 +23,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8044
+INFO: [Synth 8-7075] Helper process launched with PID 14876
 WARNING: [Synth 8-2611] redeclaration of ansi port o16Reg is not allowed [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_RawSignal.v:30]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1251.008 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1253.555 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'xillydemo' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:1]
 INFO: [Synth 8-6157] synthesizing module 'xillybus' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus.v:3]
@@ -264,14 +264,14 @@ INFO: [Synth 8-6157] synthesizing module 'xillybus_core' [E:/ARCHIVOS_Y_DOCUMENT
 INFO: [Synth 8-6155] done synthesizing module 'xillybus_core' (56#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus_core.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'xillybus' (57#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus.v:3]
 WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:140]
-INFO: [Synth 8-6157] synthesizing module 'fifo_GS_Host_FPGA' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-704-DESKTOP-EJ28NGN/realtime/fifo_GS_Host_FPGA_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_GS_Host_FPGA' (58#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-704-DESKTOP-EJ28NGN/realtime/fifo_GS_Host_FPGA_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_GS_Host_FPGA' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-14316-DESKTOP-EJ28NGN/realtime/fifo_GS_Host_FPGA_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_GS_Host_FPGA' (58#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-14316-DESKTOP-EJ28NGN/realtime/fifo_GS_Host_FPGA_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'Gs_StateMachin' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Gs_StateMachin.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Gs_StateMachin' (59#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Gs_StateMachin.v:23]
 WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:267]
 WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:268]
-INFO: [Synth 8-6157] synthesizing module 'fifo_GS_FPGA_Host' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-704-DESKTOP-EJ28NGN/realtime/fifo_GS_FPGA_Host_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_GS_FPGA_Host' (60#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-704-DESKTOP-EJ28NGN/realtime/fifo_GS_FPGA_Host_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_GS_FPGA_Host' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-14316-DESKTOP-EJ28NGN/realtime/fifo_GS_FPGA_Host_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_GS_FPGA_Host' (60#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-14316-DESKTOP-EJ28NGN/realtime/fifo_GS_FPGA_Host_stub.v:6]
 WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:278]
 WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:279]
 INFO: [Synth 8-6157] synthesizing module 'GS_SimSignal' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_SimSignal.v:23]
@@ -433,18 +433,18 @@ WARNING: [Synth 8-7129] Port In112[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In113[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1324.922 ; gain = 73.914
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1324.922 ; gain = 71.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1324.922 ; gain = 73.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1324.922 ; gain = 71.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1324.922 ; gain = 73.914
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1324.922 ; gain = 71.367
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.177 . Memory (MB): peak = 1324.922 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.174 . Memory (MB): peak = 1324.922 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -682,22 +682,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/xillydemo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1360.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1361.148 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1360.723 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1361.148 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1360.723 ; gain = 109.715
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1361.148 ; gain = 107.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1360.723 ; gain = 109.715
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1361.148 ; gain = 107.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -718,7 +718,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for fifo_GS_TX. (constraint file  aut
 Applied set_property KEEP_HIERARCHY = SOFT for fifo_GS_RX. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for fifo_GS_RX_TEST. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1360.723 ; gain = 109.715
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1361.148 ; gain = 107.594
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_25_b2s_wr_cmd_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_25_b2s_rd_cmd_fsm'
@@ -761,7 +761,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'r8GS_States_q_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r8States_q_reg' using encoding 'one-hot' in module 'GS_SimSignal'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1360.723 ; gain = 109.715
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1361.148 ; gain = 107.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -967,7 +967,7 @@ CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin PS_GPIO[24] with 1st dr
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin PS_GPIO[24] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/system.v:4]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net PS_GPIO[24] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/system.v:4]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1360.723 ; gain = 109.715
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.148 ; gain = 107.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -988,19 +988,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1429.602 ; gain = 178.594
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1426.582 ; gain = 173.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1464.336 ; gain = 213.328
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1461.273 ; gain = 207.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1476.535 ; gain = 225.527
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1473.508 ; gain = 219.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1018,37 +1018,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1479.012 ; gain = 228.004
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.805 ; gain = 223.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1479.012 ; gain = 228.004
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.805 ; gain = 223.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1479.012 ; gain = 228.004
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.805 ; gain = 223.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1479.012 ; gain = 228.004
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.805 ; gain = 223.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1479.012 ; gain = 228.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.805 ; gain = 223.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1479.012 ; gain = 228.004
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.805 ; gain = 223.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1116,11 +1116,11 @@ Report Cell Usage:
 |29    |OBUFT              |     5|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1479.012 ; gain = 228.004
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.805 ; gain = 223.250
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 96 critical warnings and 180 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 1479.012 ; gain = 192.203
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1479.012 ; gain = 228.004
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:35 . Memory (MB): peak = 1476.805 ; gain = 187.023
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1476.805 ; gain = 223.250
 INFO: [Project 1-571] Translating synthesized netlist
 Release 14.7 - ngc2edif P_INT.20191124 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
@@ -1164,7 +1164,7 @@ WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_w0[26 : 0] on block
    signals.
   finished :Prep
 Writing EDIF netlist file xillybus_core.edif ...
-ngc2edif: Total memory usage is 4332752 kilobytes
+ngc2edif: Total memory usage is 4332304 kilobytes
 
 Reading core file 'E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/cores/xillybus_core.ngc' for (cell view 'xillybus_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_core_ngc_9f37f810.edif]
@@ -1179,7 +1179,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file xillybus_lite.edif ...
-ngc2edif: Total memory usage is 4321936 kilobytes
+ngc2edif: Total memory usage is 4321552 kilobytes
 
 Reading core file 'e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/system/pcores/xillybus_lite_v1_00_a/netlist/xillybus_lite.ngc' for (cell view 'xillybus_lite', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_lite_ngc_31b96eff.edif]
@@ -1206,18 +1206,18 @@ WARNING:NetListWriters:306 - Signal bus
    signals.
   finished :Prep
 Writing EDIF netlist file xillyvga_core.edif ...
-ngc2edif: Total memory usage is 4323984 kilobytes
+ngc2edif: Total memory usage is 4323728 kilobytes
 
 Reading core file 'E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/cores/xillyvga_core.ngc' for (cell view 'xillyvga_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_9f37f810.edif]
 Finished Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_9f37f810.edif]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.201 . Memory (MB): peak = 1496.594 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.176 . Memory (MB): peak = 1494.340 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3923 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Xilinx ngc2edif P_INT.20191124
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1521.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1517.770 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2806 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 183 instances
@@ -1237,8 +1237,8 @@ Synth Design complete, checksum: 74a7b22b
 INFO: [Common 17-83] Releasing license: Synthesis
 321 Infos, 245 Warnings, 96 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:58 . Memory (MB): peak = 1521.211 ; gain = 270.203
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:02 . Memory (MB): peak = 1517.770 ; gain = 264.215
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/xillydemo.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file xillydemo_utilization_synth.rpt -pb xillydemo_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan  9 17:36:14 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 11 19:55:24 2022...

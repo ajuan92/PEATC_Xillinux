@@ -28,14 +28,15 @@ reg rClk, rReset ,rWr_en;
 reg [15:0] r16TestData;
 
 wire wRd_en, wEmty_flag;
-wire [15:0] w16Data;
+wire [15:0] w16DataFifo, wDataRam;
 
 integer i;
 
 initial
 begin
+    rWr_en = 1'b0;
     rReset = 1'b1;
-    #8
+    #2
     rReset = 1'b0;
 end
 
@@ -51,10 +52,10 @@ end
 always @(posedge rClk)
 begin
 
+    #4
     rWr_en = 1'b1;
     r16TestData = 16'd5;
     #2
-   
     r16TestData =  16'd10;    
     #2
     r16TestData =  16'd20;    
@@ -67,7 +68,7 @@ begin
     #2 
     
     rWr_en = 1'b0;
-    
+    #18
     
     $finish;
 end
@@ -78,16 +79,20 @@ fifo_RN_Host_FPGA dut_fifo_RN_RX(
   .srst(rReset),
   .din(r16TestData),
   .wr_en(rWr_en),
-  .rd_en(wRd_en),
-  .dout(w16Data),
+  .rd_en(!rWr_en),
+  .dout(w16DataFifo),
   .empty(wEmty_flag)
 );
 
 Rn_StateMachin dut_RN_StateMachin(
     .iClk(rClk),
     .iReset(rReset),
-    .i16FifoData(r16TestData),
-    .iFifoEmpty(wEmty_flag)
+    .i16FifoData(w16DataFifo),
+    .iEmptyFifo(wEmty_flag),
+    .oReadFifo(wRd_en),
+    .iRead_en(8'd0),
+    .i8Addr(8'd0),
+    .o16ReadData(wDataRam)
     );
 
 endmodule
