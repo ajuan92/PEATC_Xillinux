@@ -6,6 +6,7 @@ verilog xil_defaultlib  --include "../../../../../../vivado-essentials/vivado_sy
 "../../../../xillydemo.gen/sources_1/ip/fifo_GS_Host_FPGA/fifo_GS_Host_FPGA_sim_netlist.v" \
 "../../../../../../vivado-essentials/fifo_8x2048/fifo_8x2048_sim_netlist.v" \
 "../../../../xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/sim/fifo_RN_Host_FPGA.v" \
+"../../../../xillydemo.gen/sources_1/ip/fifo_RN_FPGA_Host/sim/fifo_RN_FPGA_Host.v" \
 "../../../../../src/xillydemo.v" \
 "../../../../../src/smbus.v" \
 "../../../../../src/i2s_audio.v" \

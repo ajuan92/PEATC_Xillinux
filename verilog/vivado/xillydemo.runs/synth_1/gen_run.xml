@@ -112,10 +112,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="vga_fifo"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_GS_FPGA_Host"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_GS_Host_FPGA"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_RN_Host_FPGA"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_GS_Host_FPGA"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_GS_FPGA_Host"/>
+  <BlockFileSet Type="BlockSrcs" Name="vga_fifo"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_32x512"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_8x2048"/>
 </GenRun>

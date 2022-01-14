@@ -125,6 +125,8 @@ INFO: [VRFC 10-311] analyzing module fifo_8x2048_blk_mem_gen_v8_4_5
 INFO: [VRFC 10-311] analyzing module fifo_8x2048_blk_mem_gen_v8_4_5_synth
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/sim/fifo_RN_Host_FPGA.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fifo_RN_Host_FPGA
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_FPGA_Host/sim/fifo_RN_FPGA_Host.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_RN_FPGA_Host
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xillydemo
 INFO: [VRFC 10-2458] undeclared symbol PS_CLK, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:118]

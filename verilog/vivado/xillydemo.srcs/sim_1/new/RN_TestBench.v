@@ -24,7 +24,7 @@ module RN_TestBench;
 
 localparam CLOCK_CYCLE = 1;
 
-reg rClk, rReset ,rWr_en;
+reg rClk, rReset ,rWr_en,rWrTx_en;
 reg [15:0] r16TestData;
 
 wire wRd_en, wEmty_flag;
@@ -35,6 +35,7 @@ integer i;
 initial
 begin
     rWr_en = 1'b0;
+    rWrTx_en = 1'b0;
     rReset = 1'b1;
     #2
     rReset = 1'b0;
@@ -68,8 +69,9 @@ begin
     #2 
     
     rWr_en = 1'b0;
-    #18
-    
+    #26
+    rWrTx_en = 1'b1;
+    #16
     $finish;
 end
 
@@ -84,15 +86,48 @@ fifo_RN_Host_FPGA dut_fifo_RN_RX(
   .empty(wEmty_flag)
 );
 
+wire [7:0] w8RamAddr;
+wire wRamRead;
+
+wire wFifoTxWriteEna;
+wire [15:0]w16FifoTxWriteData;
+
 Rn_StateMachin dut_RN_StateMachin(
     .iClk(rClk),
     .iReset(rReset),
     .i16FifoData(w16DataFifo),
     .iEmptyFifo(wEmty_flag),
     .oReadFifo(wRd_en),
-    .iRead_en(8'd0),
-    .i8Addr(8'd0),
+    .iRead_en(wRamRead),
+    .i8Addr(w8RamAddr),
     .o16ReadData(wDataRam)
     );
+
+wire wEnaTestFifo;
+
+RN_SimResult dut_RN_SimResult(
+    .iClk(rClk),
+    .iReset(rReset),
+    .i16RamData(wDataRam),
+    .o8RamAddr(w8RamAddr),
+    .oReadEnaRam(wRamRead),
+    .iReadTigger(wRd_en),
+    .oWriteEnaFifo(wFifoTxWriteEna),
+    .o16ReadData(w16FifoTxWriteData),
+    .oWriteEnaTestFifo(wEnaTestFifo)
+    );
+
+wire [31:0]w16FifoRxData;
+wire wEmtyTx_flag;
+
+fifo_RN_FPGA_Host dut_fifo_RN_TX(
+  .clk(rClk),
+  .srst(rReset),
+  .din({16'd0,w16FifoTxWriteData}),
+  .wr_en(wFifoTxWriteEna),
+  .rd_en(rWrTx_en),
+  .dout(w16FifoRxData),
+  .empty(wEmtyTx_flag)
+);
 
 endmodule
