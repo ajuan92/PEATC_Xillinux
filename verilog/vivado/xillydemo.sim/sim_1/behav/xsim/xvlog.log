@@ -129,27 +129,27 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_L
 INFO: [VRFC 10-311] analyzing module fifo_RN_FPGA_Host
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xillydemo
-INFO: [VRFC 10-2458] undeclared symbol PS_CLK, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:118]
-INFO: [VRFC 10-2458] undeclared symbol PS_PORB, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:119]
-INFO: [VRFC 10-2458] undeclared symbol PS_SRSTB, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:120]
-INFO: [VRFC 10-2458] undeclared symbol DDR_Addr, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:123]
-INFO: [VRFC 10-2458] undeclared symbol DDR_BankAddr, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:124]
-INFO: [VRFC 10-2458] undeclared symbol DDR_CAS_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:125]
-INFO: [VRFC 10-2458] undeclared symbol DDR_CKE, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:126]
-INFO: [VRFC 10-2458] undeclared symbol DDR_CS_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:127]
-INFO: [VRFC 10-2458] undeclared symbol DDR_Clk, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:128]
-INFO: [VRFC 10-2458] undeclared symbol DDR_Clk_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:129]
-INFO: [VRFC 10-2458] undeclared symbol DDR_DM, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:130]
-INFO: [VRFC 10-2458] undeclared symbol DDR_DQ, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:131]
-INFO: [VRFC 10-2458] undeclared symbol DDR_DQS, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:132]
-INFO: [VRFC 10-2458] undeclared symbol DDR_DQS_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:133]
-INFO: [VRFC 10-2458] undeclared symbol DDR_DRSTB, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:134]
-INFO: [VRFC 10-2458] undeclared symbol DDR_ODT, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:135]
-INFO: [VRFC 10-2458] undeclared symbol DDR_RAS_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:136]
-INFO: [VRFC 10-2458] undeclared symbol DDR_VRN, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:137]
-INFO: [VRFC 10-2458] undeclared symbol DDR_VRP, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:138]
-INFO: [VRFC 10-2458] undeclared symbol MIO, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:139]
-INFO: [VRFC 10-2458] undeclared symbol DDR_WEB, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:141]
+INFO: [VRFC 10-2458] undeclared symbol PS_CLK, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:120]
+INFO: [VRFC 10-2458] undeclared symbol PS_PORB, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:121]
+INFO: [VRFC 10-2458] undeclared symbol PS_SRSTB, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:122]
+INFO: [VRFC 10-2458] undeclared symbol DDR_Addr, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:125]
+INFO: [VRFC 10-2458] undeclared symbol DDR_BankAddr, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:126]
+INFO: [VRFC 10-2458] undeclared symbol DDR_CAS_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:127]
+INFO: [VRFC 10-2458] undeclared symbol DDR_CKE, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:128]
+INFO: [VRFC 10-2458] undeclared symbol DDR_CS_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:129]
+INFO: [VRFC 10-2458] undeclared symbol DDR_Clk, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:130]
+INFO: [VRFC 10-2458] undeclared symbol DDR_Clk_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:131]
+INFO: [VRFC 10-2458] undeclared symbol DDR_DM, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:132]
+INFO: [VRFC 10-2458] undeclared symbol DDR_DQ, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:133]
+INFO: [VRFC 10-2458] undeclared symbol DDR_DQS, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:134]
+INFO: [VRFC 10-2458] undeclared symbol DDR_DQS_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:135]
+INFO: [VRFC 10-2458] undeclared symbol DDR_DRSTB, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:136]
+INFO: [VRFC 10-2458] undeclared symbol DDR_ODT, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:137]
+INFO: [VRFC 10-2458] undeclared symbol DDR_RAS_n, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:138]
+INFO: [VRFC 10-2458] undeclared symbol DDR_VRN, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:139]
+INFO: [VRFC 10-2458] undeclared symbol DDR_VRP, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:140]
+INFO: [VRFC 10-2458] undeclared symbol MIO, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:141]
+INFO: [VRFC 10-2458] undeclared symbol DDR_WEB, assumed default net type wire [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:143]
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/smbus.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module smbus
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/i2s_audio.v" into library xil_defaultlib
@@ -204,6 +204,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_L
 INFO: [VRFC 10-311] analyzing module GS_TestBench
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sim_1/new/RN_TestBench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RN_TestBench
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.sim/sim_1/behav/xsim/glbl.v:6]

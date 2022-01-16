@@ -29,6 +29,13 @@ reg [15:0] r16TestData;
 
 wire wRd_en, wEmty_flag;
 wire [15:0] w16DataFifo, wDataRam;
+wire [7:0] w8RamAddr;
+wire wRamRead;
+wire wFifoTxWriteEna;
+wire [15:0]w16FifoTxWriteData;
+wire wEnaTestFifo;
+wire [31:0]w16FifoRxData;
+wire wEmtyTx_flag;
 
 integer i;
 
@@ -75,6 +82,7 @@ begin
     $finish;
 end
 
+wire [7:0] wFifoDataCount;
 
 fifo_RN_Host_FPGA dut_fifo_RN_RX(
   .clk(rClk),
@@ -83,27 +91,24 @@ fifo_RN_Host_FPGA dut_fifo_RN_RX(
   .wr_en(rWr_en),
   .rd_en(!rWr_en),
   .dout(w16DataFifo),
-  .empty(wEmty_flag)
+  .empty(wEmty_flag),
+  .data_count(wFifoDataCount)
 );
 
-wire [7:0] w8RamAddr;
-wire wRamRead;
-
-wire wFifoTxWriteEna;
-wire [15:0]w16FifoTxWriteData;
 
 Rn_StateMachin dut_RN_StateMachin(
     .iClk(rClk),
     .iReset(rReset),
     .i16FifoData(w16DataFifo),
-    .iEmptyFifo(wEmty_flag),
+    .iEmptyFifo(!rWr_en),
     .oReadFifo(wRd_en),
     .iRead_en(wRamRead),
     .i8Addr(w8RamAddr),
-    .o16ReadData(wDataRam)
+    .o16ReadData(wDataRam),
+    .i8FifoDataCount(wFifoDataCount)
     );
 
-wire wEnaTestFifo;
+
 
 RN_SimResult dut_RN_SimResult(
     .iClk(rClk),
@@ -117,8 +122,6 @@ RN_SimResult dut_RN_SimResult(
     .oWriteEnaTestFifo(wEnaTestFifo)
     );
 
-wire [31:0]w16FifoRxData;
-wire wEmtyTx_flag;
 
 fifo_RN_FPGA_Host dut_fifo_RN_TX(
   .clk(rClk),

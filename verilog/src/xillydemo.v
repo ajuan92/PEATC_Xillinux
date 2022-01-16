@@ -98,6 +98,8 @@ wire [7:0] w8Addr_GS;
 wire [7:0] w8Addr_New;
 wire [7:0] wSignSelec;
 
+
+
 assign PS_GPIO[24] = bus_clk;
 assign PS_GPIO[25] = user_w_fpga_reset_open;
 assign PS_GPIO[26] = !wNwCmd_available;
@@ -218,85 +220,163 @@ assign PS_GPIO[55:35] = 20'd0;
 
   );
 
+//fifo_GS_Host_FPGA fifo_GS_RX(
+//  .clk(bus_clk),
+//  .srst(user_w_fpga_reset_open),
+//  .din(user_w_gs_start_test_data),
+//  .wr_en(user_w_gs_start_test_wren),
+//  .rd_en(wNwCmd_Read),
+//  .dout(w32Cmd_Data),
+//  .empty(wNwCmd_available),
+//  .full(user_w_gs_start_test_full)
+//);
 
-fifo_GS_Host_FPGA fifo_GS_RX(
+//Gs_StateMachin GS_StateMachin(
+//    .iClk (bus_clk),
+//    .iReset (user_w_fpga_reset_open),
+//    // Comando de 32 bits con los parámetros para la prueba de PEATC
+//    .iGS_32NewCmdData ({w32Cmd_Data[31:24],w32Cmd_Data[23:16],w32Cmd_Data[15:8],w32Cmd_Data[7:0]}),
+//    //Señal que indica que hay comando disponible en la fifo
+//    .iGS_NwCmd (wNwCmd_available),
+//    //Señal para indicar que se leerá el comando de la fifo RX, activa el ReadEnable de la Fifo
+//    .oGS_FifoReadEn (wNwCmd_Read),
+//    // Comando Capturado de la fifo
+//    .oGS_32Cmd (w32Cmd_AcceptTest),
+//    //Señal que indica que la señal cruda de PEATC está lista para ser leída
+//    .iGS_RawDataReady (wRawDataReady),
+//    //Valor de la muestra de la señal cruda de PEATC
+//    .iGS_16Reg (w16Reg),
+//    //Dirección en memoria de una muestra de la señal cruda de PEATC
+//    .oGS_8Addr (w8Addr_GS),
+//    //Enable para la memoria donde se almacena la señal cruda de PEATC
+//    .oGS_SignSelec (wSignSelec),
+//    //Señal para escribir en la fifo TX
+//    .oGS_WriteRawSignal (wRawSignalEna),
+//    //Valor de la muestra de la señal cruda de PEATC a escribirse en la fifo Tx
+//    .oGS_16RawSignal (w16RawSignal),
+//    //Salida de check point para pruebas
+//    .oGS_RegAcCmd (wRegCmdTest)
+//    );
+
+//fifo_GS_FPGA_Host fifo_GS_TX(
+//  .clk(bus_clk),
+//  .srst(user_w_fpga_reset_open),
+//  .din({w16RawSignal[7:0],w16RawSignal[15:8]}),
+//  .wr_en(wRawSignalEna),
+//  .rd_en(user_r_gs_raw_signal_rden),
+//  .dout(user_r_gs_raw_signal_data),
+//  .empty(user_r_gs_raw_signal_eof && user_r_gs_raw_signal_empty),
+//  .full(1'd0)
+//);
+
+wire wRd_en; 
+wire wEmty_flag;
+wire [15:0] w16DataFifo;
+wire [15:0] w16DataRam;
+wire [7:0] w8RamAddr;
+wire wRamRead;
+wire wFifoTxWriteEna;
+wire [15:0]w16FifoTxWriteData;
+wire wEnaTestFifo;
+wire [31:0]w16FifoRxData;
+wire wEmtyTx_flag;
+
+wire [7:0] wFifoDataCount;
+
+
+fifo_RN_Host_FPGA fifo_RN_RX(
   .clk(bus_clk),
   .srst(user_w_fpga_reset_open),
-  .din(user_w_gs_start_test_data),
-  .wr_en(user_w_gs_start_test_wren),
-  .rd_en(wNwCmd_Read),
-  .dout(w32Cmd_Data),
-  .empty(wNwCmd_available),
-  .full(user_w_gs_start_test_full)
+  .din(user_w_rn_diag_param_data),
+  .wr_en(user_w_rn_diag_param_wren),
+  .rd_en(!user_w_rn_diag_param_wren),
+  .dout(w16DataFifo),
+  .empty(wEmty_flag),
+  .data_count(wFifoDataCount)
 );
 
-Gs_StateMachin GS_StateMachin(
-    .iClk (bus_clk),
-    .iReset (user_w_fpga_reset_open),
-    // Comando de 32 bits con los parámetros para la prueba de PEATC
-    .iGS_32NewCmdData ({w32Cmd_Data[31:24],w32Cmd_Data[23:16],w32Cmd_Data[15:8],w32Cmd_Data[7:0]}),
-    //Señal que indica que hay comando disponible en la fifo
-    .iGS_NwCmd (wNwCmd_available),
-    //Señal para indicar que se leerá el comando de la fifo RX, activa el ReadEnable de la Fifo
-    .oGS_FifoReadEn (wNwCmd_Read),
-    // Comando Capturado de la fifo
-    .oGS_32Cmd (w32Cmd_AcceptTest),
-    //Señal que indica que la señal cruda de PEATC está lista para ser leída
-    .iGS_RawDataReady (wRawDataReady),
-    //Valor de la muestra de la señal cruda de PEATC
-    .iGS_16Reg (w16Reg),
-    //Dirección en memoria de una muestra de la señal cruda de PEATC
-    .oGS_8Addr (w8Addr_GS),
-    //Enable para la memoria donde se almacena la señal cruda de PEATC
-    .oGS_SignSelec (wSignSelec),
-    //Señal para escribir en la fifo TX
-    .oGS_WriteRawSignal (wRawSignalEna),
-    //Valor de la muestra de la señal cruda de PEATC a escribirse en la fifo Tx
-    .oGS_16RawSignal (w16RawSignal),
-    //Salida de check point para pruebas
-    .oGS_RegAcCmd (wRegCmdTest)
+Rn_StateMachin RN_StateMachin(
+    .iClk(bus_clk),
+    .iReset(user_w_fpga_reset_open),
+    .i16FifoData(w16DataFifo),
+    .o16ReadData(w16DataRam),
+    .iEmptyFifo(!user_w_rn_diag_param_wren),
+    .i8FifoDataCount(wFifoDataCount)
     );
 
-fifo_GS_Host_FPGA fifo_GS_RX_TEST(
-  .clk(bus_clk),
-  .srst(user_w_fpga_reset_open),
-  .din({w32Cmd_Data[31:24],w32Cmd_Data[15:8],w8Addr_GS,w16Reg[7:0]}),
-  .wr_en(wRawSignalEna),
-  .rd_en(user_r_gs_test_rden),
-  .dout(user_r_gs_test_data),
-  .empty(user_r_gs_test_eof && user_r_gs_test_empty),
-  .full(1'd0)
-);
+// RN_SimResult SimResult(
+//    .iClk(bus_clk),
+//    .iReset(user_w_fpga_reset_open),
+//    .i16RamData(w16DataRam),
+//    .o8RamAddr(w8RamAddr),
+//    .oReadEnaRam(wRamRead),
+//    .iReadTigger(wRd_en),
+//    .oWriteEnaFifo(wFifoTxWriteEna),
+//    .o16ReadData(w16FifoTxWriteData),
+//    .oWriteEnaTestFifo(wEnaTestFifo)
+//    );  
 
-fifo_GS_FPGA_Host fifo_GS_TX(
+fifo_RN_FPGA_Host fifo_RN_TX(
   .clk(bus_clk),
   .srst(user_w_fpga_reset_open),
-  .din({w16RawSignal[7:0],w16RawSignal[15:8]}),
-  .wr_en(wRawSignalEna),
-  .rd_en(user_r_gs_raw_signal_rden),
-  .dout(user_r_gs_raw_signal_data),
-  .empty(user_r_gs_raw_signal_eof && user_r_gs_raw_signal_empty),
-  .full(1'd0)
+  .din({16'd0,w16DataRam}),
+  .wr_en(!user_w_rn_diag_param_wren),
+  .rd_en(user_r_rn_diag_result_rden),
+  .dout(user_r_rn_diag_result_data),
+  .empty(user_r_rn_diag_result_empty)
 );
 
 //----------------------------IMPLEMENTACIÓN DE SIMULACION PARA PRUEBAS---------------------------------
-GS_SimSignal SimSignal(
-    .iClk(bus_clk),
-    .iReset(user_w_fpga_reset_open | wNwCmd_Read),
-    .iGS_32Cmd(w32Cmd_AcceptTest),
-    
-    .oGS_8Addr(w8Addr_New),
-    .i8Addr(w8Addr_GS),
-    
-    .oGS_RawDataReady(wRawDataReady)
-    );
 
-     
-GS_RawSignal  RawSignal(
-    .iClk (bus_clk),
-    .o16Reg (w16Reg),
-    .i8Addr (w8Addr_New),
-    .iSignSelec (wSignSelec)
-    );
+//fifo_GS_Host_FPGA fifo_GS_RX_TEST(
+//  .clk(bus_clk),
+//  .srst(user_w_fpga_reset_open),
+//  .din({w32Cmd_Data[31:24],w32Cmd_Data[15:8],w8Addr_GS,w16Reg[7:0]}),
+//  .wr_en(wRawSignalEna),
+//  .rd_en(user_r_gs_test_rden),
+//  .dout(user_r_gs_test_data),
+//  .empty(user_r_gs_test_eof && user_r_gs_test_empty),
+//  .full(1'd0)
+//);
+
+//GS_SimSignal SimSignal(
+//    .iClk(bus_clk),
+//    .iReset(user_w_fpga_reset_open | wNwCmd_Read),
+//    .iGS_32Cmd(w32Cmd_AcceptTest),
+    
+//    .oGS_8Addr(w8Addr_New),
+//    .i8Addr(w8Addr_GS),
+    
+//    .oGS_RawDataReady(wRawDataReady)
+//    );
+    
+//GS_RawSignal  RawSignal(
+//    .iClk (bus_clk),
+//    .o16Reg (w16Reg),
+//    .i8Addr (w8Addr_New),
+//    .iSignSelec (wSignSelec)
+//    );
+    
+//fifo_RN_Host_FPGA fifo_RN_RX_TEST(
+//  .clk(bus_clk),
+//  .srst(user_w_fpga_reset_open),
+//  .din(w16FifoTxWriteData),
+//  .wr_en(wEnaTestFifo),
+//  .rd_en(user_r_rn_test_rden),
+//  .dout(user_r_rn_test_data),
+//  .empty(user_r_rn_test_empty)
+//);    
+    
+// RN_SimResult SimResult(
+//    .iClk(bus_clk),
+//    .iReset(user_w_fpga_reset_open),
+//    .i16RamData(w16DataRam),
+//    .o8RamAddr(w8RamAddr),
+//    .oReadEnaRam(wRamRead),
+//    .iReadTigger(wRd_en),
+//    .oWriteEnaFifo(wFifoTxWriteEna),
+//    .o16ReadData(w16FifoTxWriteData),
+//    .oWriteEnaTestFifo(wEnaTestFifo)
+//    );   
 
 endmodule

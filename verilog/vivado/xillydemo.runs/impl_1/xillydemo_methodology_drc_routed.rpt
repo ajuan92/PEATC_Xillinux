@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Jan 11 19:56:53 2022
+| Date         : Sun Jan 16 03:05:55 2022
 | Host         : DESKTOP-EJ28NGN running 64-bit major release  (build 9200)
 | Command      : report_methodology -file xillydemo_methodology_drc_routed.rpt -pb xillydemo_methodology_drc_routed.pb -rpx xillydemo_methodology_drc_routed.rpx
 | Design       : xillydemo
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 114
+             Violations found: 111
 +-----------+----------+------------------------------------------------------+------------+
 | Rule      | Severity | Description                                          | Violations |
 +-----------+----------+------------------------------------------------------+------------+
-| HPDR-1    | Warning  | Port pin direction inconsistency                     | 32         |
+| HPDR-1    | Warning  | Port pin direction inconsistency                     | 29         |
 | TIMING-9  | Warning  | Unknown CDC Logic                                    | 1          |
 | TIMING-10 | Warning  | Missing property on synchronizer                     | 1          |
 | TIMING-18 | Warning  | Missing input or output delay                        | 60         |
@@ -55,145 +55,130 @@ Related violations: <none>
 
 HPDR-1#4 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[27] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[27]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[28] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[28]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#5 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[28] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[28]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[29] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[29]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#6 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[29] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[29]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[30] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[30]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#7 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[30] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[30]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[31] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[31]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#8 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[31] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[31]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[33] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[33]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#9 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[32] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[32]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[35] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[35]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#10 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[33] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[33]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[36] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[36]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#11 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[34] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[34]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[37] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[37]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#12 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[35] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[35]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[38] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[38]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#13 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[36] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[36]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[39] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[39]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#14 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[37] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[37]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[40] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[40]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#15 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[38] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[38]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[41] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[41]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#16 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[39] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[39]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[42] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[42]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#17 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[40] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[40]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[43] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[43]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#18 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[41] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[41]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[44] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[44]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#19 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[42] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[42]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[45] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[45]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#20 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[43] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[43]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[46] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[46]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#21 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[44] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[44]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[47] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[47]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#22 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[45] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[45]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[48] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[48]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#23 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[46] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[46]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[49] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[49]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#24 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[47] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[47]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[50] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[50]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#25 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[48] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[48]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[51] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[51]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#26 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[49] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[49]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[52] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[52]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#27 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[50] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[50]) connected to this Port, but both were not found.
+Hierarchical port(pin) PS_GPIO[53] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[53]) connected to this Port, but both were not found.
 Related violations: <none>
 
 HPDR-1#28 Warning
 Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[51] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[51]) connected to this Port, but both were not found.
-Related violations: <none>
-
-HPDR-1#29 Warning
-Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[52] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[52]) connected to this Port, but both were not found.
-Related violations: <none>
-
-HPDR-1#30 Warning
-Port pin direction inconsistency  
-Hierarchical port(pin) PS_GPIO[53] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[53]) connected to this Port, but both were not found.
-Related violations: <none>
-
-HPDR-1#31 Warning
-Port pin direction inconsistency  
 Hierarchical port(pin) PS_GPIO[54] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[54]) connected to this Port, but both were not found.
 Related violations: <none>
 
-HPDR-1#32 Warning
+HPDR-1#29 Warning
 Port pin direction inconsistency  
 Hierarchical port(pin) PS_GPIO[55] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (PS_GPIO[55]) connected to this Port, but both were not found.
 Related violations: <none>

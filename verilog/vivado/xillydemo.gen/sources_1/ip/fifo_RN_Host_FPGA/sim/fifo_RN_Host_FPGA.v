@@ -61,7 +61,8 @@ module fifo_RN_Host_FPGA (
   rd_en,
   dout,
   full,
-  empty
+  empty,
+  data_count
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME core_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
@@ -80,6 +81,7 @@ output wire [15 : 0] dout;
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
+output wire [7 : 0] data_count;
 
   fifo_generator_v13_2_6 #(
     .C_COMMON_CLOCK(1),
@@ -96,7 +98,7 @@ output wire empty;
     .C_HAS_ALMOST_EMPTY(0),
     .C_HAS_ALMOST_FULL(0),
     .C_HAS_BACKUP(0),
-    .C_HAS_DATA_COUNT(0),
+    .C_HAS_DATA_COUNT(1),
     .C_HAS_INT_CLK(0),
     .C_HAS_MEMINIT_FILE(0),
     .C_HAS_OVERFLOW(0),
@@ -316,7 +318,7 @@ output wire empty;
     .almost_empty(),
     .valid(),
     .underflow(),
-    .data_count(),
+    .data_count(data_count),
     .rd_data_count(),
     .wr_data_count(),
     .prog_full(),

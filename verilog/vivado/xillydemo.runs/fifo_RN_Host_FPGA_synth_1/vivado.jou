@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Jan  9 16:44:37 2022
-# Process ID: 13504
+# Start of session at: Sun Jan 16 02:15:06 2022
+# Process ID: 5864
 # Current directory: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/fifo_RN_Host_FPGA_synth_1
 # Command line: vivado.exe -log fifo_RN_Host_FPGA.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_RN_Host_FPGA.tcl
 # Log file: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/fifo_RN_Host_FPGA_synth_1/fifo_RN_Host_FPGA.vds

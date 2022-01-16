@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "fifo_RN_Host_FPGA_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_msg_config  -id {BD 41-968}  -string {{xillybus_S_AXI}}  -new_severity {INFO} 
 set_msg_config  -id {Netlist 29-160}  -string {{vivado_system_processing_system7}}  -new_severity {INFO} 
 set_msg_config  -id {BD 41-968}  -string {{xillybus_M_AXI}}  -new_severity {INFO} 
@@ -99,7 +100,7 @@ set_property ip_output_repo e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillin
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA.xci
+read_ip -quiet E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA.xci
 set_property used_in_implementation false [get_files -all e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA.xdc]
 set_property used_in_implementation false [get_files -all e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA_ooc.xdc]
 

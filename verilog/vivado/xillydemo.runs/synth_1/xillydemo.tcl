@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_msg_config  -id {BD 41-968}  -string {{xillybus_S_AXI}}  -new_severity {INFO} 
 set_msg_config  -id {Netlist 29-160}  -string {{vivado_system_processing_system7}}  -new_severity {INFO} 
 set_msg_config  -id {BD 41-968}  -string {{xillybus_M_AXI}}  -new_severity {INFO} 
@@ -108,6 +109,7 @@ read_verilog -library xil_defaultlib {
   E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_RawSignal.v
   E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_SimSignal.v
   E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v
+  E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v
 }
 add_files E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/vivado_system.bd
 set_property used_in_implementation false [get_files -all e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
@@ -141,6 +143,10 @@ set_property used_in_implementation false [get_files -all e:/ARCHIVOS_Y_DOCUMENT
 read_ip -quiet E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA.xci
 set_property used_in_implementation false [get_files -all e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA.xdc]
 set_property used_in_implementation false [get_files -all e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA_ooc.xdc]
+
+read_ip -quiet E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/ip/fifo_RN_FPGA_Host/fifo_RN_FPGA_Host.xci
+set_property used_in_implementation false [get_files -all e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_FPGA_Host/fifo_RN_FPGA_Host.xdc]
+set_property used_in_implementation false [get_files -all e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_FPGA_Host/fifo_RN_FPGA_Host_ooc.xdc]
 
 set_property edif_extra_search_paths E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/cores [current_fileset]
 OPTRACE "Adding files" END { }
