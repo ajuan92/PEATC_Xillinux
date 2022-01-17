@@ -111,7 +111,7 @@ begin
             
         STATE_NEXT_RAM_MEMORY:
            
-            if(r8RamAddr_d >= 8'd255)
+            if(r8RamAddr_q == 8'd255)
             begin                
                 r8State_d = STATE_END_STATE;
             end
@@ -128,13 +128,15 @@ begin
     endcase
     
     
-    if(r8State_d == STATE_READ_RAM)
+    if(r8State_q == STATE_READ_RAM)
     begin
         r8RamAddr_d = 8'd0;
         rReadEnaRam = 1'd1;
+        rWriteEnaTestFifo_d = 1'd0;
         rWriteEnaFifo_d = 1'd0;
+        r16Write_d = 16'd0;
     end
-    else if(r8State_d == STATE_WRITE_FIFO)
+    else if(r8State_q == STATE_WRITE_FIFO)
     begin
         r8RamAddr_d = 8'd0;
         rReadEnaRam = 1'd1;
@@ -142,14 +144,19 @@ begin
         rWriteEnaFifo_d = 1'd1;
         r16Write_d = r16RamData_q;
     end
-    else if(r8State_d == STATE_NEXT_RAM_MEMORY)
+    else if(r8State_q == STATE_NEXT_RAM_MEMORY)
     begin
-        rWriteEnaFifo_d = 1'd0;
         r8RamAddr_d = r8RamAddr_q + 8'd1;
+        rReadEnaRam = 1'd0;
+        rWriteEnaTestFifo_d = 1'd0;
+        rWriteEnaFifo_d = 1'd0;
+        r16Write_d = 16'd0;
+
     end
     else
     begin
         r8RamAddr_d = 8'd0;
+        rReadEnaRam = 1'd0;
         rWriteEnaTestFifo_d = 1'd0;
         rWriteEnaFifo_d = 1'd0;
         r16Write_d = 16'd0;

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Sun Jan 16 03:04:34 2022
+| Date         : Mon Jan 17 02:25:27 2022
 | Host         : DESKTOP-EJ28NGN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file xillydemo_utilization_synth.rpt -pb xillydemo_utilization_synth.pb
 | Design       : xillydemo
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 3922 |     0 |          0 |     53200 |  7.37 |
-|   LUT as Logic             | 3706 |     0 |          0 |     53200 |  6.97 |
+| Slice LUTs*                | 3896 |     0 |          0 |     53200 |  7.32 |
+|   LUT as Logic             | 3680 |     0 |          0 |     53200 |  6.92 |
 |   LUT as Memory            |  216 |     0 |          0 |     17400 |  1.24 |
 |     LUT as Distributed RAM |  148 |     0 |            |           |       |
 |     LUT as Shift Register  |   68 |     0 |            |           |       |
-| Slice Registers            | 3996 |    14 |          0 |    106400 |  3.76 |
-|   Register as Flip Flop    | 3996 |    14 |          0 |    106400 |  3.76 |
+| Slice Registers            | 3933 |    14 |          0 |    106400 |  3.70 |
+|   Register as Flip Flop    | 3933 |    14 |          0 |    106400 |  3.70 |
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                   |   58 |     0 |          0 |     26600 |  0.22 |
 | F8 Muxes                   |    0 |     0 |          0 |     13300 |  0.00 |
@@ -59,8 +59,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 14    |          Yes |           - |        Reset |
-| 149   |          Yes |         Set |            - |
-| 3833  |          Yes |       Reset |            - |
+| 150   |          Yes |         Set |            - |
+| 3769  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,15 +150,15 @@ Table of Contents
 +-----------+------+----------------------+
 |  Ref Name | Used |  Functional Category |
 +-----------+------+----------------------+
-| FDRE      | 3833 |         Flop & Latch |
-| LUT6      | 1285 |                  LUT |
-| LUT3      |  876 |                  LUT |
-| LUT5      |  603 |                  LUT |
-| LUT4      |  532 |                  LUT |
-| LUT2      |  372 |                  LUT |
+| FDRE      | 3769 |         Flop & Latch |
+| LUT6      | 1266 |                  LUT |
+| LUT3      |  883 |                  LUT |
+| LUT5      |  590 |                  LUT |
+| LUT4      |  531 |                  LUT |
+| LUT2      |  378 |                  LUT |
 | LUT1      |  322 |                  LUT |
 | CARRY4    |  201 |           CarryLogic |
-| FDSE      |  149 |         Flop & Latch |
+| FDSE      |  150 |         Flop & Latch |
 | BIBUF     |  130 |                   IO |
 | RAMD64E   |   96 |   Distributed Memory |
 | RAMD32    |   72 |   Distributed Memory |
@@ -184,8 +184,8 @@ Table of Contents
 +-------------------+------+
 |      Ref Name     | Used |
 +-------------------+------+
+| fifo_RN_Host_FPGA |    2 |
 | vga_fifo          |    1 |
-| fifo_RN_Host_FPGA |    1 |
 | fifo_RN_FPGA_Host |    1 |
 +-------------------+------+
 

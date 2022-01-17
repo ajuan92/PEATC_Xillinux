@@ -299,32 +299,45 @@ Rn_StateMachin RN_StateMachin(
     .iClk(bus_clk),
     .iReset(user_w_fpga_reset_open),
     .i16FifoData(w16DataFifo),
+    .iStartReadFifo(!user_w_rn_diag_param_wren),
     .o16ReadData(w16DataRam),
-    .iEmptyFifo(!user_w_rn_diag_param_wren),
+    .iReadTigger(wRd_en),
+    .iRead_en(wRamRead),
+    .i8Addr(w8RamAddr),
     .i8FifoDataCount(wFifoDataCount)
     );
 
-// RN_SimResult SimResult(
-//    .iClk(bus_clk),
-//    .iReset(user_w_fpga_reset_open),
-//    .i16RamData(w16DataRam),
-//    .o8RamAddr(w8RamAddr),
-//    .oReadEnaRam(wRamRead),
-//    .iReadTigger(wRd_en),
-//    .oWriteEnaFifo(wFifoTxWriteEna),
-//    .o16ReadData(w16FifoTxWriteData),
-//    .oWriteEnaTestFifo(wEnaTestFifo)
-//    );  
+ RN_SimResult SimResult(
+    .iClk(bus_clk),
+    .iReset(user_w_fpga_reset_open),    
+    .i16RamData(w16DataRam),
+    .o8RamAddr(w8RamAddr),
+    .oReadEnaRam(wRamRead),
+    .iReadTigger(wRd_en),
+    .oWriteEnaFifo(wFifoTxWriteEna),
+    .o16ReadData(w16FifoTxWriteData),
+    .oWriteEnaTestFifo(wEnaTestFifo)
+    );  
 
 fifo_RN_FPGA_Host fifo_RN_TX(
   .clk(bus_clk),
   .srst(user_w_fpga_reset_open),
-  .din({16'd0,w16DataRam}),
-  .wr_en(!user_w_rn_diag_param_wren),
+  .din({16'd0,w16FifoTxWriteData}),
+  .wr_en(wFifoTxWriteEna),
   .rd_en(user_r_rn_diag_result_rden),
   .dout(user_r_rn_diag_result_data),
   .empty(user_r_rn_diag_result_empty)
 );
+
+fifo_RN_Host_FPGA fifo_RN_RX_TEST(
+  .clk(bus_clk),
+  .srst(user_w_fpga_reset_open),
+  .din(w16FifoTxWriteData),
+  .wr_en(wEnaTestFifo),
+  .rd_en(user_r_rn_test_rden),
+  .dout(user_r_rn_test_data),
+  .empty(user_r_rn_test_empty)
+);    
 
 //----------------------------IMPLEMENTACIÓN DE SIMULACION PARA PRUEBAS---------------------------------
 

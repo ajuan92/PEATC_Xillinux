@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1642323822">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1642407875">
   <File Type="PA-TCL" Name="xillydemo.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="xillydemo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="xillydemo_reports.tcl"/>

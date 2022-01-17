@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Jan 16 03:03:45 2022
-# Process ID: 14300
+# Start of session at: Mon Jan 17 02:24:37 2022
+# Process ID: 13860
 # Current directory: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1
 # Command line: vivado.exe -log xillydemo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xillydemo.tcl
 # Log file: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/xillydemo.vds
@@ -23,10 +23,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5504
+INFO: [Synth 8-7075] Helper process launched with PID 21376
 WARNING: [Synth 8-2611] redeclaration of ansi port o16Reg is not allowed [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/GS_RawSignal.v:30]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1252.680 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1254.367 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'xillydemo' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:1]
 INFO: [Synth 8-6157] synthesizing module 'xillybus' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus.v:3]
@@ -264,121 +264,23 @@ INFO: [Synth 8-6157] synthesizing module 'xillybus_core' [E:/ARCHIVOS_Y_DOCUMENT
 INFO: [Synth 8-6155] done synthesizing module 'xillybus_core' (56#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus_core.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'xillybus' (57#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillybus.v:3]
 WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:142]
-INFO: [Synth 8-6157] synthesizing module 'fifo_RN_Host_FPGA' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-14300-DESKTOP-EJ28NGN/realtime/fifo_RN_Host_FPGA_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_RN_Host_FPGA' (58#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-14300-DESKTOP-EJ28NGN/realtime/fifo_RN_Host_FPGA_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_RN_Host_FPGA' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-13860-DESKTOP-EJ28NGN/realtime/fifo_RN_Host_FPGA_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_RN_Host_FPGA' (58#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-13860-DESKTOP-EJ28NGN/realtime/fifo_RN_Host_FPGA_stub.v:6]
 WARNING: [Synth 8-7071] port 'full' of module 'fifo_RN_Host_FPGA' is unconnected for instance 'fifo_RN_RX' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:287]
 WARNING: [Synth 8-7023] instance 'fifo_RN_RX' of module 'fifo_RN_Host_FPGA' has 9 connections declared, but only 8 given [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:287]
 INFO: [Synth 8-6157] synthesizing module 'Rn_StateMachin' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:23]
-WARNING: [Synth 8-324] index 11 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 12 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 13 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 14 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 15 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 16 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 17 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 18 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 19 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 20 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 21 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 22 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 23 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 24 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 25 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 26 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 27 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 28 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 29 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 30 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 31 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 32 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 33 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 34 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 35 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 36 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 37 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 38 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 39 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 40 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 41 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 42 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 43 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 44 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 45 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 46 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 47 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 48 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 49 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 50 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 51 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 52 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 53 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 54 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 55 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 56 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 57 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 58 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 59 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 60 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 61 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 62 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 63 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 64 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 65 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 66 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 67 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 68 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 69 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 70 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 71 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 72 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 73 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 74 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 75 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 76 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 77 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 78 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 79 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 80 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 81 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 82 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 83 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 84 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 85 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 86 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 87 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 88 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 89 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 90 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 91 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 92 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 93 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 94 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 95 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 96 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 97 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 98 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 99 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 100 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 101 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 102 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 103 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 104 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 105 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 106 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 107 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 108 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 109 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-WARNING: [Synth 8-324] index 110 out of range [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:63]
-INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'Rn_StateMachin' (59#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/Rn_StateMachin.v:23]
-WARNING: [Synth 8-7071] port 'oReadFifo' of module 'Rn_StateMachin' is unconnected for instance 'RN_StateMachin' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:298]
-WARNING: [Synth 8-7071] port 'iRead_en' of module 'Rn_StateMachin' is unconnected for instance 'RN_StateMachin' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:298]
-WARNING: [Synth 8-7071] port 'i8Addr' of module 'Rn_StateMachin' is unconnected for instance 'RN_StateMachin' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:298]
-WARNING: [Synth 8-7023] instance 'RN_StateMachin' of module 'Rn_StateMachin' has 9 connections declared, but only 6 given [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:298]
-INFO: [Synth 8-6157] synthesizing module 'fifo_RN_FPGA_Host' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-14300-DESKTOP-EJ28NGN/realtime/fifo_RN_FPGA_Host_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_RN_FPGA_Host' (60#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-14300-DESKTOP-EJ28NGN/realtime/fifo_RN_FPGA_Host_stub.v:6]
-WARNING: [Synth 8-7071] port 'full' of module 'fifo_RN_FPGA_Host' is unconnected for instance 'fifo_RN_TX' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:319]
-WARNING: [Synth 8-7023] instance 'fifo_RN_TX' of module 'fifo_RN_FPGA_Host' has 8 connections declared, but only 7 given [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:319]
+INFO: [Synth 8-6157] synthesizing module 'RN_SimResult' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v:23]
+WARNING: [Synth 8-6014] Unused sequential element rWriteEnaFifo_q_reg was removed.  [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v:52]
+WARNING: [Synth 8-6014] Unused sequential element rWriteEnaFifo_d_reg was removed.  [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'RN_SimResult' (60#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fifo_RN_FPGA_Host' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-13860-DESKTOP-EJ28NGN/realtime/fifo_RN_FPGA_Host_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_RN_FPGA_Host' (61#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/.Xil/Vivado-13860-DESKTOP-EJ28NGN/realtime/fifo_RN_FPGA_Host_stub.v:6]
+WARNING: [Synth 8-7071] port 'full' of module 'fifo_RN_FPGA_Host' is unconnected for instance 'fifo_RN_TX' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:322]
+WARNING: [Synth 8-7023] instance 'fifo_RN_TX' of module 'fifo_RN_FPGA_Host' has 8 connections declared, but only 7 given [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:322]
+WARNING: [Synth 8-7071] port 'full' of module 'fifo_RN_Host_FPGA' is unconnected for instance 'fifo_RN_RX_TEST' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:332]
+WARNING: [Synth 8-7071] port 'data_count' of module 'fifo_RN_Host_FPGA' is unconnected for instance 'fifo_RN_RX_TEST' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:332]
+WARNING: [Synth 8-7023] instance 'fifo_RN_RX_TEST' of module 'fifo_RN_Host_FPGA' has 9 connections declared, but only 7 given [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:332]
 WARNING: [Synth 8-3848] Net wRegCmdTest in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:89]
 WARNING: [Synth 8-3848] Net wRawSignalEna in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:95]
 WARNING: [Synth 8-3848] Net wNwCmd_Read in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:86]
@@ -401,11 +303,9 @@ WARNING: [Synth 8-3848] Net user_r_rn_diag_result_eof in module/entity xillydemo
 WARNING: [Synth 8-3848] Net user_r_gs_test_data in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:52]
 WARNING: [Synth 8-3848] Net user_r_gs_test_empty in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:51]
 WARNING: [Synth 8-3848] Net user_r_gs_test_eof in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:53]
-WARNING: [Synth 8-3848] Net user_r_rn_test_data in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:72]
-WARNING: [Synth 8-3848] Net user_r_rn_test_empty in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:71]
 WARNING: [Synth 8-3848] Net user_r_rn_test_eof in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:73]
 WARNING: [Synth 8-3848] Net user_w_fpga_reset_full in module/entity xillydemo does not have driver. [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:32]
-INFO: [Synth 8-6155] done synthesizing module 'xillydemo' (61#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'xillydemo' (62#1) [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/src/xillydemo.v:1]
 WARNING: [Synth 8-3917] design xillydemo has port PS_GPIO[55] driven by constant 0
 WARNING: [Synth 8-3917] design xillydemo has port PS_GPIO[54] driven by constant 0
 WARNING: [Synth 8-3917] design xillydemo has port PS_GPIO[53] driven by constant 0
@@ -431,6 +331,14 @@ WARNING: [Synth 8-3917] design xillydemo has port PS_GPIO[31] driven by constant
 WARNING: [Synth 8-3917] design xillydemo has port PS_GPIO[30] driven by constant 0
 WARNING: [Synth 8-3917] design xillydemo has port PS_GPIO[29] driven by constant 0
 WARNING: [Synth 8-3917] design xillydemo has port PS_GPIO[28] driven by constant 0
+WARNING: [Synth 8-7129] Port i16RamData[15] in module RN_SimResult is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i16RamData[14] in module RN_SimResult is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i16RamData[13] in module RN_SimResult is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i16RamData[12] in module RN_SimResult is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i16RamData[11] in module RN_SimResult is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i16RamData[10] in module RN_SimResult is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i16RamData[9] in module RN_SimResult is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i16RamData[8] in module RN_SimResult is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -523,28 +431,20 @@ WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In105[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In106[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In107[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In108[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In109[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In110[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In111[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In112[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In113[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In114[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In115[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.906 ; gain = 74.227
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1325.406 ; gain = 71.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.906 ; gain = 74.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1325.406 ; gain = 71.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.906 ; gain = 74.227
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1325.406 ; gain = 71.039
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.162 . Memory (MB): peak = 1326.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 1325.406 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -553,6 +453,8 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA_in_context.xdc] for cell 'fifo_RN_RX'
 Finished Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA_in_context.xdc] for cell 'fifo_RN_RX'
+Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA_in_context.xdc] for cell 'fifo_RN_RX_TEST'
+Finished Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA/fifo_RN_Host_FPGA_in_context.xdc] for cell 'fifo_RN_RX_TEST'
 Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_FPGA_Host/fifo_RN_FPGA_Host/fifo_RN_FPGA_Host_in_context.xdc] for cell 'fifo_RN_TX'
 Finished Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_RN_FPGA_Host/fifo_RN_FPGA_Host/fifo_RN_FPGA_Host_in_context.xdc] for cell 'fifo_RN_TX'
 Parsing XDC File [e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc] for cell 'xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst'
@@ -780,22 +682,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/xillydemo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1326.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1370.324 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1326.906 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1370.324 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1326.906 ; gain = 74.227
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1370.324 ; gain = 115.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1326.906 ; gain = 74.227
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1370.324 ; gain = 115.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -813,12 +715,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for xillybus_ins/system_i/vivado_syst
 Applied set_property KEEP_HIERARCHY = SOFT for xillybus_ins/system_i/vivado_system_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for xillybus_ins/system_i/vivado_system_i/xlconcat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for fifo_RN_RX. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for fifo_RN_RX_TEST. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for fifo_RN_TX. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1326.906 ; gain = 74.227
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1370.324 ; gain = 115.957
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_25_b2s_wr_cmd_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_25_b2s_rd_cmd_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'r8State_q_reg' in module 'RN_SimResult'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -837,8 +741,18 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
                  SM_DONE |                               00 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_25_b2s_rd_cmd_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                            00001 |                         00000000
+          STATE_READ_RAM |                            00010 |                         00000001
+        STATE_WRITE_FIFO |                            00100 |                         00000010
+   STATE_NEXT_RAM_MEMORY |                            01000 |                         00000011
+         STATE_END_STATE |                            10000 |                         00000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r8State_q_reg' using encoding 'one-hot' in module 'RN_SimResult'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1326.906 ; gain = 74.227
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1370.324 ; gain = 115.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -846,8 +760,8 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   12 Bit       Adders := 8     
-	   2 Input    9 Bit       Adders := 3     
-	   2 Input    8 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 3     
 	   2 Input    6 Bit       Adders := 1     
 	   2 Input    5 Bit       Adders := 4     
 	   2 Input    4 Bit       Adders := 4     
@@ -857,34 +771,38 @@ Detailed RTL Component Info :
 	               64 Bit    Registers := 1     
 	               47 Bit    Registers := 2     
 	               36 Bit    Registers := 2     
-	               16 Bit    Registers := 12    
+	               16 Bit    Registers := 14    
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 9     
-	                9 Bit    Registers := 5     
-	                8 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 8     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 4     
 	                4 Bit    Registers := 7     
 	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 10    
-	                1 Bit    Registers := 53    
+	                1 Bit    Registers := 59    
 +---Muxes : 
 	   2 Input   66 Bit        Muxes := 4     
 	   2 Input   64 Bit        Muxes := 1     
 	   2 Input   47 Bit        Muxes := 2     
 	   2 Input   36 Bit        Muxes := 2     
 	   2 Input   32 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 1     
 	   2 Input   14 Bit        Muxes := 2     
 	   2 Input   12 Bit        Muxes := 6     
-	   2 Input    9 Bit        Muxes := 5     
-	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 3     
+	   5 Input    8 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 7     
+	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 19    
 	   2 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 17    
 	   4 Input    2 Bit        Muxes := 4     
 	   2 Input    1 Bit        Muxes := 78    
+	   4 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1037,26 +955,33 @@ CRITICAL WARNING: [Synth 8-6858] multi-driven net PS_GPIO[25] is connected to at
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin PS_GPIO[24] with 1st driver pin 'i_31/z' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/system.v:4]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin PS_GPIO[24] with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/system.v:4]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net PS_GPIO[24] is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/system.v:4]
+WARNING: [Synth 8-3332] Sequential element (SimResult/FSM_onehot_r8State_q_reg[4]) is unused and will be removed from module xillydemo.
+WARNING: [Synth 8-3332] Sequential element (SimResult/FSM_onehot_r8State_q_reg[3]) is unused and will be removed from module xillydemo.
+WARNING: [Synth 8-3332] Sequential element (SimResult/FSM_onehot_r8State_d_reg[4]) is unused and will be removed from module xillydemo.
+WARNING: [Synth 8-3332] Sequential element (SimResult/FSM_onehot_r8State_d_reg[3]) is unused and will be removed from module xillydemo.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SimResult/rReadEnaRam_reg__0/Q' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v:53]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.srcs/sources_1/new/RN_SimResult.v:53]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1326.906 ; gain = 74.227
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1370.324 ; gain = 115.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1420.152 ; gain = 167.473
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1432.727 ; gain = 178.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1458.355 ; gain = 205.676
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1468.379 ; gain = 214.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1469.562 ; gain = 216.883
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1480.359 ; gain = 225.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1074,37 +999,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1471.535 ; gain = 218.855
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1482.867 ; gain = 228.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1471.535 ; gain = 218.855
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1482.867 ; gain = 228.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1471.535 ; gain = 218.855
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1482.867 ; gain = 228.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1471.535 ; gain = 218.855
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1482.867 ; gain = 228.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1471.535 ; gain = 218.855
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1482.867 ; gain = 228.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1471.535 ; gain = 218.855
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1482.867 ; gain = 228.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1131,7 +1056,7 @@ Report BlackBoxes:
 +------+------------------+----------+
 |      |BlackBox name     |Instances |
 +------+------------------+----------+
-|1     |fifo_RN_Host_FPGA |         1|
+|1     |fifo_RN_Host_FPGA |         2|
 |2     |fifo_RN_FPGA_Host |         1|
 |3     |xillybus_core     |         1|
 |4     |xillybus_lite     |         1|
@@ -1143,38 +1068,38 @@ Report Cell Usage:
 |      |Cell               |Count |
 +------+-------------------+------+
 |1     |fifo_RN_FPGA_Host  |     1|
-|2     |fifo_RN_Host_FPGA  |     1|
-|3     |xillybus_core      |     1|
-|4     |xillybus_lite_bbox |     1|
-|5     |xillyvga_core      |     1|
-|6     |BIBUF              |   130|
-|7     |BUFG               |     1|
-|8     |CARRY4             |    18|
-|9     |LUT1               |    61|
-|10    |LUT2               |    38|
-|11    |LUT3               |   277|
-|12    |LUT4               |    99|
-|13    |LUT5               |   116|
-|14    |LUT6               |   218|
-|15    |PS7                |     1|
-|16    |SRL16              |     1|
-|17    |SRL16E             |    18|
-|18    |SRLC32E            |    47|
-|19    |FDCE               |    14|
-|20    |FDR                |     4|
-|21    |FDRE               |   903|
-|22    |FDSE               |    19|
-|23    |IBUF               |     2|
-|24    |IOBUF              |    24|
-|25    |OBUF               |    47|
-|26    |OBUFT              |     5|
+|2     |fifo_RN_Host_FPGA  |     2|
+|4     |xillybus_core      |     1|
+|5     |xillybus_lite_bbox |     1|
+|6     |xillyvga_core      |     1|
+|7     |BIBUF              |   130|
+|8     |BUFG               |     1|
+|9     |CARRY4             |    18|
+|10    |LUT1               |    61|
+|11    |LUT2               |    44|
+|12    |LUT3               |   284|
+|13    |LUT4               |    98|
+|14    |LUT5               |   103|
+|15    |LUT6               |   199|
+|16    |PS7                |     1|
+|17    |SRL16              |     1|
+|18    |SRL16E             |    18|
+|19    |SRLC32E            |    47|
+|20    |FDCE               |    14|
+|21    |FDR                |     4|
+|22    |FDRE               |   839|
+|23    |FDSE               |    20|
+|24    |IBUF               |     2|
+|25    |IOBUF              |    24|
+|26    |OBUF               |    47|
+|27    |OBUFT              |     5|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1471.535 ; gain = 218.855
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1482.867 ; gain = 228.500
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 96 critical warnings and 182 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1471.535 ; gain = 218.855
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1471.535 ; gain = 218.855
+Synthesis finished with 0 errors, 99 critical warnings and 186 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 1482.867 ; gain = 183.582
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1482.867 ; gain = 228.500
 INFO: [Project 1-571] Translating synthesized netlist
 Release 14.7 - ngc2edif P_INT.20191124 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
@@ -1233,7 +1158,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file xillybus_lite.edif ...
-ngc2edif: Total memory usage is 4321232 kilobytes
+ngc2edif: Total memory usage is 4321936 kilobytes
 
 Reading core file 'e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/system/pcores/xillybus_lite_v1_00_a/netlist/xillybus_lite.ngc' for (cell view 'xillybus_lite', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_lite_ngc_31b96eff.edif]
@@ -1260,18 +1185,18 @@ WARNING:NetListWriters:306 - Signal bus
    signals.
   finished :Prep
 Writing EDIF netlist file xillyvga_core.edif ...
-ngc2edif: Total memory usage is 4323728 kilobytes
+ngc2edif: Total memory usage is 4323984 kilobytes
 
 Reading core file 'E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/cores/xillyvga_core.ngc' for (cell view 'xillyvga_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_9f37f810.edif]
 Finished Parsing EDIF File [./.ngc2edfcache/xillyvga_core_ngc_9f37f810.edif]
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.178 . Memory (MB): peak = 1489.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1500.457 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3903 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Xilinx ngc2edif P_INT.20191124
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1515.152 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1527.598 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2806 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 183 instances
@@ -1287,12 +1212,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1D => RAM64X1D (RAMD64E(x2)): 16 instances
   SRL16 => SRL16E: 1 instance 
 
-Synth Design complete, checksum: fb279507
+Synth Design complete, checksum: e2710f44
 INFO: [Common 17-83] Releasing license: Synthesis
-314 Infos, 347 Warnings, 96 Critical Warnings and 0 Errors encountered.
+317 Infos, 250 Warnings, 99 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1515.152 ; gain = 262.473
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1527.598 ; gain = 273.230
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.runs/synth_1/xillydemo.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file xillydemo_utilization_synth.rpt -pb xillydemo_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 16 03:04:34 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 17 02:25:27 2022...

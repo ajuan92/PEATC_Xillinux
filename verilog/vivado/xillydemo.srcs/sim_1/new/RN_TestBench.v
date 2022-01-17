@@ -100,7 +100,7 @@ Rn_StateMachin dut_RN_StateMachin(
     .iClk(rClk),
     .iReset(rReset),
     .i16FifoData(w16DataFifo),
-    .iEmptyFifo(!rWr_en),
+    .iStartReadFifo(!rWr_en),
     .oReadFifo(wRd_en),
     .iRead_en(wRamRead),
     .i8Addr(w8RamAddr),
