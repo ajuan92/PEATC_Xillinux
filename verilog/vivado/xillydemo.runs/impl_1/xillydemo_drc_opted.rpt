@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Mon Jan 17 02:26:07 2022
+| Date         : Mon Jan 17 22:11:38 2022
 | Host         : DESKTOP-EJ28NGN running 64-bit major release  (build 9200)
 | Command      : report_drc -file xillydemo_drc_opted.rpt -pb xillydemo_drc_opted.pb -rpx xillydemo_drc_opted.rpx
 | Design       : xillydemo
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 50
+             Violations found: 53
 +-----------+----------+---------------------------------+------------+
 | Rule      | Severity | Description                     | Violations |
 +-----------+----------+---------------------------------+------------+
 | CHECK-3   | Warning  | Report rule limit reached       | 1          |
 | REQP-1840 | Warning  | RAMB18 async control check      | 20         |
-| RPBF-3    | Warning  | IO port buffering is incomplete | 29         |
+| RPBF-3    | Warning  | IO port buffering is incomplete | 32         |
 +-----------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
@@ -132,12 +132,12 @@ Related violations: <none>
 
 REQP-1840#19 Warning
 RAMB18 async control check  
-The RAMB18E1 xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/enb) which is driven by a register (xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/enb) which is driven by a register (xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#20 Warning
 RAMB18 async control check  
-The RAMB18E1 xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/enb) which is driven by a register (xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/enb) which is driven by a register (xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_fifo_wrapper_ins/vga_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.sckt_rd_rst_ic_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 RPBF-3#1 Warning
@@ -157,130 +157,145 @@ Related violations: <none>
 
 RPBF-3#4 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[28] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[27] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#5 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[29] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[28] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#6 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[30] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[29] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#7 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[31] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[30] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#8 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[33] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[31] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#9 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[35] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[32] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#10 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[36] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[33] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#11 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[37] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[34] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#12 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[38] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[35] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#13 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[39] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[36] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#14 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[40] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[37] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#15 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[41] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[38] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#16 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[42] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[39] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#17 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[43] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[40] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#18 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[44] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[41] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#19 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[45] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[42] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#20 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[46] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[43] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#21 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[47] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[44] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#22 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[48] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[45] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#23 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[49] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[46] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#24 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[50] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[47] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#25 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[51] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[48] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#26 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[52] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[49] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#27 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[53] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[50] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#28 Warning
 IO port buffering is incomplete  
-Device port PS_GPIO[54] expects both input and output buffering but the buffers are incomplete.
+Device port PS_GPIO[51] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#29 Warning
+IO port buffering is incomplete  
+Device port PS_GPIO[52] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#30 Warning
+IO port buffering is incomplete  
+Device port PS_GPIO[53] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#31 Warning
+IO port buffering is incomplete  
+Device port PS_GPIO[54] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#32 Warning
 IO port buffering is incomplete  
 Device port PS_GPIO[55] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>

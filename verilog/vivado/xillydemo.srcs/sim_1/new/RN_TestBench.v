@@ -101,7 +101,7 @@ Rn_StateMachin dut_RN_StateMachin(
     .iReset(rReset),
     .i16FifoData(w16DataFifo),
     .iStartReadFifo(!rWr_en),
-    .oReadFifo(wRd_en),
+    .iReadTigger(wRd_en),
     .iRead_en(wRamRead),
     .i8Addr(w8RamAddr),
     .o16ReadData(wDataRam),

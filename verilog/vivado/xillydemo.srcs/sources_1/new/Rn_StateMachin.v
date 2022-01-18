@@ -35,6 +35,7 @@ module Rn_StateMachin(
 parameter RN_TOTAL_RAM_LEN = 10;
 
 reg [15:0] a16Ram[RN_TOTAL_RAM_LEN:0]; 
+
 reg [15:0] r16FifoData_q, r16FifoData_d = 16'd0;
 reg rEmptyFifo_q, rEmptyFifo_d = 1'd0;
 reg [7:0] r8addr_q, r8addr_d = 8'd0;
@@ -45,7 +46,7 @@ reg [7:0] r8Addr = 8'd0;
 reg [15:0] r16ReadData = 16'd0;
 reg rRamDataReady_q, rRamDataReady_d = 1'd0; 
 
-assign o16ReadData = r16ReadData;
+assign o16ReadData =  a16Ram[r8Addr];
 assign iReadTigger = rRamDataReady_q;
 
 integer i;
@@ -84,14 +85,14 @@ begin
         begin
            a16Ram[r8addr_q] <= r16FifoData_d;
         end
-        else if (rRead_en_q == 1'b1) 
-        begin
-           r16ReadData <=  a16Ram[r8addr_q];
-        end
-        else
-        begin
-            r16ReadData <= 16'd0;
-        end
+//        else if (rRead_en_q == 1'b1) 
+//        begin
+//           r16ReadData <=  a16Ram[r8addr_q];
+//        end
+//        else
+//        begin
+//            r16ReadData <= 16'd0;
+//        end
         
     end 
         
@@ -103,10 +104,10 @@ begin
     begin
         r8addr_d = r8addr_q + 8'd1;
     end
-    else if (rRead_en_q == 1'b1) 
-    begin
-        r8addr_d = r8Addr;
-    end
+//    else if (rRead_en_q == 1'b1) 
+//    begin
+//        r8addr_d = r8Addr;
+//    end
     else
     begin
         r8addr_d = 8'd0;
