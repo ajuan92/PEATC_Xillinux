@@ -43,7 +43,7 @@ reg rWriteEnaFifo_q, rWriteEnaFifo_d;
 reg rReadEnaRam;
 
 reg [7:0] r8RamAddr_q, r8RamAddr_d;
-reg [7:0] r16RamData_q, r16RamData_d;
+reg [15:0] r16RamData_q, r16RamData_d;
 reg [7:0] r8State_q, r8State_d = STATE_IDLE;
 reg rWriteEnaTestFifo_q, rWriteEnaTestFifo_d;
 
@@ -97,21 +97,23 @@ begin
             
         STATE_READ_RAM:
         
-            if(r16RamData_q != 16'd0)
-            begin                
-                r8State_d = STATE_WRITE_FIFO;
-            end
-            else
-            begin
-                r8State_d = STATE_READ_RAM;
-            end
+//            if(r16RamData_q != 16'd0)
+//            begin                
+//                r8State_d = STATE_WRITE_FIFO;
+//            end
+//            else
+//            begin
+//                r8State_d = STATE_READ_RAM;
+//            end
+            
+            r8State_d = STATE_WRITE_FIFO;
 
         STATE_WRITE_FIFO:
             r8State_d = STATE_NEXT_RAM_MEMORY;
             
         STATE_NEXT_RAM_MEMORY:
            
-            if(r8RamAddr_q == 8'd255)
+            if(r8RamAddr_q == 8'd128) //8
             begin                
                 r8State_d = STATE_END_STATE;
             end
@@ -140,7 +142,7 @@ begin
     begin
         r8RamAddr_d = 8'd0;
         rReadEnaRam = 1'd1;
-        rWriteEnaTestFifo_d = 1'd1;
+        rWriteEnaTestFifo_d = 1'd0;
         rWriteEnaFifo_d = 1'd1;
         r16Write_d = r16RamData_q;
     end
@@ -148,9 +150,9 @@ begin
     begin
         r8RamAddr_d = r8RamAddr_q + 8'd1;
         rReadEnaRam = 1'd0;
-        rWriteEnaTestFifo_d = 1'd0;
+        rWriteEnaTestFifo_d = 1'd1;
         rWriteEnaFifo_d = 1'd0;
-        r16Write_d = 16'd0;
+        r16Write_d = r16RamData_q;
 
     end
     else

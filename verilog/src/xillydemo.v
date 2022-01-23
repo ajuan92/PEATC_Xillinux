@@ -310,7 +310,7 @@ Rn_StateMachin RN_StateMachin(
 fifo_RN_FPGA_Host fifo_RN_TX(
   .clk(bus_clk),
   .srst(user_w_fpga_reset_open),
-  .din({16'd0,w16FifoTxWriteData}),
+  .din({w16FifoTxWriteData[15:8],w16FifoTxWriteData[7:0],16'd0}),
   .wr_en(wFifoTxWriteEna),
   .rd_en(user_r_rn_diag_result_rden),
   .dout(user_r_rn_diag_result_data),
@@ -351,7 +351,7 @@ GS_RawSignal  RawSignal(
 fifo_RN_Host_FPGA fifo_RN_RX_TEST(
   .clk(bus_clk),
   .srst(user_w_fpga_reset_open),
-  .din(w16FifoTxWriteData),
+  .din({w16FifoTxWriteData[15:8],w16FifoTxWriteData[7:0]}),
   .wr_en(wEnaTestFifo),
   .rd_en(user_r_rn_test_rden),
   .dout(user_r_rn_test_data),

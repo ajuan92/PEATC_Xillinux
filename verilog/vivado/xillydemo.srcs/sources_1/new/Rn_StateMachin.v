@@ -32,7 +32,7 @@ module Rn_StateMachin(
     input [7:0] i8FifoDataCount
     );
 
-parameter RN_TOTAL_RAM_LEN = 10;
+parameter RN_TOTAL_RAM_LEN = 128;
 
 reg [15:0] a16Ram[RN_TOTAL_RAM_LEN:0]; 
 
@@ -85,14 +85,6 @@ begin
         begin
            a16Ram[r8addr_q] <= r16FifoData_d;
         end
-//        else if (rRead_en_q == 1'b1) 
-//        begin
-//           r16ReadData <=  a16Ram[r8addr_q];
-//        end
-//        else
-//        begin
-//            r16ReadData <= 16'd0;
-//        end
         
     end 
         
@@ -104,10 +96,6 @@ begin
     begin
         r8addr_d = r8addr_q + 8'd1;
     end
-//    else if (rRead_en_q == 1'b1) 
-//    begin
-//        r8addr_d = r8Addr;
-//    end
     else
     begin
         r8addr_d = 8'd0;
