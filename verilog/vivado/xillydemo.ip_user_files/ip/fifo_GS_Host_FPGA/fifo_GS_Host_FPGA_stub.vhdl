@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
 -- Date        : Thu Dec 30 13:44:13 2021
 -- Host        : DESKTOP-EJ28NGN running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_GS_Host_FPGA/fifo_GS_Host_FPGA_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top fifo_GS_Host_FPGA -prefix
+--               fifo_GS_Host_FPGA_ fifo_GS_Host_FPGA_stub.vhdl
 -- Design      : fifo_GS_Host_FPGA
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

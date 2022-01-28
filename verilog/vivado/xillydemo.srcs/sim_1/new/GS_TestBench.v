@@ -85,7 +85,7 @@ begin
     $finish;
 end
 
-fifo_GS_Host_FPGA dut_fifo_GS_RX(
+fifo_GS_Host_FPGAn dut_fifo_GS_RX(
   .clk(rClk),
   .srst(rReset|woActiv),
   .din(r32Cmd_Data),

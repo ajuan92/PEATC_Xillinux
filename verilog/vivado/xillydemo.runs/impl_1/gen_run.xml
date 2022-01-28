@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1642926600">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1643350939">
   <File Type="ROUTE-PWR" Name="xillydemo_power_routed.rpt"/>
   <File Type="PA-TCL" Name="xillydemo.tcl"/>
   <File Type="BITSTR-MMI" Name="xillydemo.mmi"/>
@@ -155,6 +155,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/RN_SimResult.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/fifo_GS_Host_FPGAn/fifo_GS_Host_FPGAn.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

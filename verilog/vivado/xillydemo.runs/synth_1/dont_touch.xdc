@@ -33,6 +33,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vivado_syst
 # IP: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_xlconcat_0_0/vivado_system_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vivado_system_xlconcat_0_0 || ORIG_REF_NAME==vivado_system_xlconcat_0_0} -quiet] -quiet
 
+# IP: ip/fifo_GS_Host_FPGAn/fifo_GS_Host_FPGAn.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fifo_GS_Host_FPGAn || ORIG_REF_NAME==fifo_GS_Host_FPGAn} -quiet] -quiet
+
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==vivado_system_processing_system7_0_0 || ORIG_REF_NAME==vivado_system_processing_system7_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
@@ -47,3 +50,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_0/vivado_system_auto_pc_0_ooc.xdc
 
 # XDC: E:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/vivado-essentials/vivado_system/vivado_system_ooc.xdc
+
+# XDC: e:/ARCHIVOS_Y_DOCUMENTOS/01_Tesis_Local/PEATC_Xillinux/PEATC_Xillinux/verilog/vivado/xillydemo.gen/sources_1/ip/fifo_GS_Host_FPGAn/fifo_GS_Host_FPGAn.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==fifo_GS_Host_FPGAn || ORIG_REF_NAME==fifo_GS_Host_FPGAn} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
