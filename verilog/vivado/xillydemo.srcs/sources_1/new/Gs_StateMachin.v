@@ -26,7 +26,7 @@ module Gs_StateMachin(
     input [31:0] iGS_32NewCmdData, // Comando de 32 bits con los parámetros para la prueba de PEATC
     input iGS_NwCmd, //Señal que indica que hay comando disponible en la fifo
     output oGS_FifoReadEn, //Señal para indicar que se leerá el comando de la fifo RX, activa el ReadEnable de la Fifo
-    output [31:0] oGS_32Cmd, // Comando Capturado de la fifo
+    output [31:0] oGS_32Cmd, // Comando Capturado de la fifo y expuesta al sistema GS_AS
     input iGS_RawDataReady, //Señal que indica que la señal cruda de PEATC está lista para ser leída
        
     input [15:0] iGS_16Reg, //Valor de la muestra de la señal cruda de PEATC

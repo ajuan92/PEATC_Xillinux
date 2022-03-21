@@ -24,26 +24,26 @@ module GS_TestBench;
 
 localparam CLOCK_CYCLE = 1;
 
-reg rClk, rReset, rWr_en;
+reg rClk, rReset, wiStartReadFifo;
 reg [31:0] r32Cmd_Data;
 
 
-wire wNwCmd_ab, wNwCmd_Accept;
-wire [31:0] w32Cmd_Data;
-wire woActiv;
-wire woReqCheck;
-wire [31:0]w32CmdForRaw;
+wire wiNwCmd, woFifoReadEn;
+wire [31:0] wi32NewCmdData;
+wire woWriteRawSignal;
+wire woRegAcCmd;
+wire [31:0]wo32Cmd;
 
-wire [15:0] w16Reg;
+wire [15:0] wi16Reg;
 
-wire [7:0] w8Addr_GS;
+wire [7:0] wo8Addr;
 wire [7:0] w8Addr_New;
 
-wire wRawDataReady;
+wire wiRawDataReady;
 
-wire wSignSelec;
+wire woSignSelec;
 
-wire [15:0] w16RawSignal;
+wire [15:0] wo16RawSignal;
 wire [15:0] w16FIFORawSignal;
 
 initial
@@ -64,43 +64,43 @@ end
 
 always @(posedge rClk)
 begin
-    rWr_en = 1'b1;
+    wiStartReadFifo = 1'b1;
     #2
     r32Cmd_Data = 32'h1EFFFFFF;
     #8
-    rWr_en = 1'b0;
+    wiStartReadFifo = 1'b0;
     
     r32Cmd_Data = 32'h28FFFFFF;
     #300
-    rWr_en = 1'b1;
+    wiStartReadFifo = 1'b1;
     #8
-    rWr_en = 1'b0;
+    wiStartReadFifo = 1'b0;
     
     r32Cmd_Data = 32'h32FFFFFF;
     #300
-    rWr_en = 1'b1;
+    wiStartReadFifo = 1'b1;
     #8
-    rWr_en = 1'b0;
+    wiStartReadFifo = 1'b0;
     #300  
     $finish;
 end
 
 fifo_GS_Host_FPGAn dut_fifo_GS_RX(
   .clk(rClk),
-  .srst(rReset|woActiv),
+  .srst(rReset|woWriteRawSignal),
   .din(r32Cmd_Data),
-  .wr_en(rWr_en),
-  .rd_en(wNwCmd_Accept),
-  .dout(w32Cmd_Data),
-  .empty(wNwCmd_ab)
+  .wr_en(wiStartReadFifo),
+  .rd_en(woFifoReadEn),
+  .dout(wi32NewCmdData),
+  .empty(wiNwCmd)
 );
 
 fifo_GS_FPGA_Host dut_fifo_GS_TX(
   .clk(rClk),
   .srst(rReset),
-  .din(w16RawSignal),
-  .wr_en(woActiv),
-  .rd_en(~woActiv),
+  .din(wo16RawSignal),
+  .wr_en(woWriteRawSignal),
+  .rd_en(~woWriteRawSignal),
   .dout(w16FIFORawSignal),
   .empty()
 );
@@ -108,39 +108,39 @@ fifo_GS_FPGA_Host dut_fifo_GS_TX(
 Gs_StateMachin dut_StateMachin(
     .iClk (rClk),
     .iReset (rReset),
-    .iGS_32NewCmdData (w32Cmd_Data),  // Comando
-    .iGS_NwCmd (wNwCmd_ab),  //Señal que indica que hay cmd disponible
-    .oGS_FifoReadEn (wNwCmd_Accept), //Señal para indicar que se leera la fifo
-    .oGS_32Cmd (w32CmdForRaw),
-    .oGS_RegAcCmd (woReqCheck),
-    .iGS_RawDataReady (wRawDataReady),
+    .iGS_32NewCmdData (wi32NewCmdData),  // Comando
+    .iGS_NwCmd (wiNwCmd),  //Señal que indica que hay cmd disponible
+    .oGS_FifoReadEn (woFifoReadEn), //Señal para indicar que se leera la fifo
+    .oGS_32Cmd (wo32Cmd),
+    .oGS_RegAcCmd (woRegAcCmd),
+    .iGS_RawDataReady (wiRawDataReady),
     
     // Conexión lectura de señales crudas
-    .iGS_16Reg (w16Reg),
-    .oGS_8Addr (w8Addr_GS),
-    .oGS_SignSelec (wSignSelec),
+    .iGS_16Reg (wi16Reg),
+    .oGS_8Addr (wo8Addr),
+    .oGS_SignSelec (woSignSelec),
     // Salida datos crudos obtenidos
-    .oGS_WriteRawSignal (woActiv),
-    .oGS_16RawSignal (w16RawSignal)
+    .oGS_WriteRawSignal (woWriteRawSignal),
+    .oGS_16RawSignal (wo16RawSignal)
     );
 
 GS_SimSignal dut_SimSignal(
     .iClk(rClk),
-    .iReset(rReset | wNwCmd_Accept),
-    .iGS_32Cmd(w32CmdForRaw),
+    .iReset(rReset | woFifoReadEn),
+    .iGS_32Cmd(wo32Cmd),
     
     .oGS_8Addr(w8Addr_New),
-    .i8Addr(w8Addr_GS),
+    .i8Addr(wo8Addr),
     
-    .oGS_RawDataReady(wRawDataReady)
+    .oGS_RawDataReady(wiRawDataReady)
     );
 
   
 GS_RawSignal dut_RawSignal(
     .iClk (rClk),
-    .o16Reg (w16Reg),
+    .o16Reg (wi16Reg),
     .i8Addr (w8Addr_New),
-    .iSignSelec (wSignSelec)
+    .iSignSelec (woSignSelec)
     );
 
 endmodule

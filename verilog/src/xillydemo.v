@@ -84,26 +84,26 @@ module xillydemo
   wire  user_irq;
   
 wire wNwCmd_Read;
-wire [31:0] w32Cmd_Data;
+wire [31:0] wi32NewCmdData;
 wire [31:0] w32Cmd_AcceptTest;
 wire wRegCmdTest;
 
-wire [31:0]w32CmdForRaw;
-wire wRawDataReady;
+wire [31:0]wo32Cmd;
+wire wiRawDataReady;
 wire wNwCmd_available;
-wire [15:0] w16RawSignal;
+wire [15:0] wo16RawSignal;
 wire wRawSignalEna;
-wire [15:0] w16Reg;
-wire [7:0] w8Addr_GS;
+wire [15:0] wi16Reg;
+wire [7:0] wo8Addr;
 wire [7:0] w8Addr_New;
-wire [7:0] wSignSelec;
+wire [7:0] woSignSelec;
 
-wire wRd_en; 
+wire woReadTigger; 
 wire wEmty_flag;
-wire [15:0] w16DataFifo;
+wire [15:0] wi16FifoData;
 wire [15:0] w16DataRam;
-wire [7:0] w8RamAddr;
-wire wRamRead;
+wire [7:0] wi8Addr;
+wire wiRead_en;
 wire wFifoTxWriteEna;
 wire [15:0]w16FifoTxWriteData;
 wire wEnaTestFifo;
@@ -113,16 +113,17 @@ wire wEmtyTx_flag;
 wire [7:0] wFifoDataCount;
 
 
-
+//Señales usadas para pruebas de Hw, no son necesarias para la aplicación
+//Se pueden comentar o eliminar en caso de necesitar dichos GPIO
 assign PS_GPIO[24] = bus_clk;
 assign PS_GPIO[25] = user_w_fpga_reset_open;
 assign PS_GPIO[26] = !wNwCmd_available;
-assign PS_GPIO[27] = wRd_en;
+assign PS_GPIO[27] = woReadTigger;
 
 assign PS_GPIO[31:28] = 3'd0;
 
 assign PS_GPIO[32] = wEnaTestFifo;
-assign PS_GPIO[33] = wRamRead;
+assign PS_GPIO[33] = wiRead_en;
 assign PS_GPIO[34] = wFifoTxWriteEna;
 
 assign PS_GPIO[55:35] = 20'd0;
@@ -153,7 +154,7 @@ assign PS_GPIO[55:35] = 20'd0;
     .DDR_VRN(DDR_VRN),
     .DDR_VRP(DDR_VRP),
     .MIO(MIO),
-    .PS_GPIO({32'd0,PS_GPIO[23:0]}),
+    .PS_GPIO({32'd0,PS_GPIO[23:0]}), //Se pueden comentar o eliminar en caso de necesitar dichos GPIO
     .DDR_WEB(DDR_WEB),
     .GPIO_LED(GPIO_LED),
     .bus_clk(bus_clk),
@@ -240,7 +241,7 @@ fifo_GS_Host_FPGA fifo_GS_RX(
   .din(user_w_gs_start_test_data),
   .wr_en(user_w_gs_start_test_wren),
   .rd_en(wNwCmd_Read),
-  .dout(w32Cmd_Data),
+  .dout(wi32NewCmdData),
   .empty(wNwCmd_available),
   .full(user_w_gs_start_test_full)
 );
@@ -249,7 +250,7 @@ Gs_StateMachin GS_StateMachin(
     .iClk (bus_clk),
     .iReset (user_w_fpga_reset_open),
     // Comando de 32 bits con los parámetros para la prueba de PEATC
-    .iGS_32NewCmdData ({w32Cmd_Data[31:24],w32Cmd_Data[23:16],w32Cmd_Data[15:8],w32Cmd_Data[7:0]}),
+    .iGS_32NewCmdData ({wi32NewCmdData[31:24],wi32NewCmdData[23:16],wi32NewCmdData[15:8],wi32NewCmdData[7:0]}),
     //Señal que indica que hay comando disponible en la fifo
     .iGS_NwCmd (wNwCmd_available),
     //Señal para indicar que se leerá el comando de la fifo RX, activa el ReadEnable de la Fifo
@@ -257,17 +258,17 @@ Gs_StateMachin GS_StateMachin(
     // Comando Capturado de la fifo
     .oGS_32Cmd (w32Cmd_AcceptTest),
     //Señal que indica que la señal cruda de PEATC está lista para ser leída
-    .iGS_RawDataReady (wRawDataReady),
+    .iGS_RawDataReady (wiRawDataReady),
     //Valor de la muestra de la señal cruda de PEATC
-    .iGS_16Reg (w16Reg),
+    .iGS_16Reg (wi16Reg),
     //Dirección en memoria de una muestra de la señal cruda de PEATC
-    .oGS_8Addr (w8Addr_GS),
+    .oGS_8Addr (wo8Addr),
     //Enable para la memoria donde se almacena la señal cruda de PEATC
-    .oGS_SignSelec (wSignSelec),
+    .oGS_SignSelec (woSignSelec),
     //Señal para escribir en la fifo TX
     .oGS_WriteRawSignal (wRawSignalEna),
     //Valor de la muestra de la señal cruda de PEATC a escribirse en la fifo Tx
-    .oGS_16RawSignal (w16RawSignal),
+    .oGS_16RawSignal (wo16RawSignal),
     //Salida de check point para pruebas
     .oGS_RegAcCmd (wRegCmdTest)
     );
@@ -275,7 +276,7 @@ Gs_StateMachin GS_StateMachin(
 fifo_GS_FPGA_Host fifo_GS_TX(
   .clk(bus_clk),
   .srst(user_w_fpga_reset_open),
-  .din({w16RawSignal[7:0],w16RawSignal[15:8]}),
+  .din({wo16RawSignal[7:0],wo16RawSignal[15:8]}),
   .wr_en(wRawSignalEna),
   .rd_en(user_r_gs_raw_signal_rden),
   .dout(user_r_gs_raw_signal_data),
@@ -289,7 +290,7 @@ fifo_RN_Host_FPGA fifo_RN_RX(
   .din(user_w_rn_diag_param_data),
   .wr_en(user_w_rn_diag_param_wren),
   .rd_en(!user_w_rn_diag_param_wren),
-  .dout(w16DataFifo),
+  .dout(wi16FifoData),
   .empty(wEmty_flag),
   .data_count(wFifoDataCount),
   .full(user_w_rn_diag_param_full)
@@ -298,12 +299,19 @@ fifo_RN_Host_FPGA fifo_RN_RX(
 Rn_StateMachin RN_StateMachin(
     .iClk(bus_clk),
     .iReset(user_w_fpga_reset_open),
-    .i16FifoData(w16DataFifo),
+    // Entrada de datos almacenados en la fifo transmitidos por el host
+    .i16FifoData(wi16FifoData),
+    // Señal que indica que hay datos disponibles para ser almacenados
     .iStartReadFifo(!user_w_rn_diag_param_wren),
+    // Salida de la lectura de la ram del módulo Rn
     .o16ReadData(w16DataRam),
-    .iReadTigger(wRd_en),
-    .iRead_en(wRamRead),
-    .i8Addr(w8RamAddr),
+    // Señal que indica que hay datos disponibles en la ram del módulo para ser leídos
+    .oReadTigger(woReadTigger),
+    //Señal de habilitación para la lectura de la ram del modulo
+    .iRead_en(wiRead_en),
+    //Dirección de acceso para la lectura de la ram del modulo
+    .i8Addr(wi8Addr),
+    //Conteo de datos contenidos en la fifo en la entrada del módulo Rn
     .i8FifoDataCount(wFifoDataCount)
     );
 
@@ -322,7 +330,7 @@ fifo_RN_FPGA_Host fifo_RN_TX(
 fifo_GS_Host_FPGA fifo_GS_RX_TEST(
   .clk(bus_clk),
   .srst(user_w_fpga_reset_open),
-  .din({w32Cmd_Data[31:24],w32Cmd_Data[15:8],w8Addr_GS,w16Reg[7:0]}),
+  .din({wi32NewCmdData[31:24],wi32NewCmdData[15:8],wo8Addr,wi16Reg[7:0]}),
   .wr_en(wRawSignalEna),
   .rd_en(user_r_gs_test_rden),
   .dout(user_r_gs_test_data),
@@ -336,16 +344,16 @@ GS_SimSignal SimSignal(
     .iGS_32Cmd(w32Cmd_AcceptTest),
     
     .oGS_8Addr(w8Addr_New),
-    .i8Addr(w8Addr_GS),
+    .i8Addr(wo8Addr),
     
-    .oGS_RawDataReady(wRawDataReady)
+    .oGS_RawDataReady(wiRawDataReady)
     );
     
 GS_RawSignal  RawSignal(
     .iClk (bus_clk),
-    .o16Reg (w16Reg),
+    .o16Reg (wi16Reg),
     .i8Addr (w8Addr_New),
-    .iSignSelec (wSignSelec)
+    .iSignSelec (woSignSelec)
     );
 
 fifo_RN_Host_FPGA fifo_RN_RX_TEST(
@@ -362,9 +370,9 @@ fifo_RN_Host_FPGA fifo_RN_RX_TEST(
     .iClk(bus_clk),
     .iReset(user_w_fpga_reset_open),    
     .i16RamData(w16DataRam),
-    .o8RamAddr(w8RamAddr),
-    .oReadEnaRam(wRamRead),
-    .iReadTigger(wRd_en),
+    .o8RamAddr(wi8Addr),
+    .oReadEnaRam(wiRead_en),
+    .oReadTigger(woReadTigger),
     .oWriteEnaFifo(wFifoTxWriteEna),
     .o16ReadData(w16FifoTxWriteData),
     .oWriteEnaTestFifo(wEnaTestFifo)

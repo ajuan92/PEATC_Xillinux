@@ -25,7 +25,7 @@ module Rn_StateMachin(
     input iReset,
     input [15:0] i16FifoData,
     input iStartReadFifo,
-    output iReadTigger,
+    output oReadTigger,
     input iRead_en,
     input [7:0] i8Addr,
     output[15:0] o16ReadData,
@@ -47,7 +47,7 @@ reg [15:0] r16ReadData = 16'd0;
 reg rRamDataReady_q, rRamDataReady_d = 1'd0; 
 
 assign o16ReadData =  a16Ram[r8Addr];
-assign iReadTigger = rRamDataReady_q;
+assign oReadTigger = rRamDataReady_q;
 
 integer i;
 

@@ -26,7 +26,7 @@ module RN_SimResult(
     input [15:0] i16RamData,
     output [7:0] o8RamAddr,
     output oReadEnaRam,
-    input iReadTigger,
+    input oReadTigger,
     output oWriteEnaFifo,
     output[15:0] o16ReadData,
     output oWriteEnaTestFifo
@@ -168,7 +168,7 @@ end
 always@*
 begin
     r16RamData_d = i16RamData;
-    rReadTr_d = iReadTigger;
+    rReadTr_d = oReadTigger;
 
 end    
     
